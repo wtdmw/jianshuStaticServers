@@ -1,0 +1,114 @@
+<html><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta name="description" content="加入简书，开启你的创作之路，来这里接收世界的赞赏。">
+    <meta name="apple-mobile-web-app-title" content="简书">
+
+    <title>注册 - 简书</title>
+
+    <link rel="stylesheet" media="all" href="/public/stylesheets/web-30728a1164102859481d.css">
+
+    <link rel="stylesheet" media="all" href="/public/stylesheets/entry-725103a0668ccb1789d4.css">
+
+    <link href="/public/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+    <link href="/public/stylesheets/style_https.1.5.6.css" rel="stylesheet">
+</head>
+
+<body class="no-padding reader-black-font" lang="zh-CN">
+<div class="sign">
+    <div class="logo"><a href="/">
+        <img src="/public/images/logo.png" alt="Logo"></a></div>
+    <div class="main">
+
+
+        <h4 class="title">
+            <div class="normal-title">
+                <a class="" href="/sign_in">登录</a>
+                <b>·</b>
+                <a id="js-sign-up-btn" class="active" href="/sign_up">注册</a>
+            </div>
+        </h4>
+
+        <div class="js-sign-up-container">
+            <form class="new_user" id="new_user" accept-charset="UTF-8" method="post">
+                <div class="input-prepend restyle">
+                    <input placeholder="你的昵称" type="text" value="" name="user[nickname]" id="user_nickname">
+                    <i class="iconfont ic-user"></i>
+                </div>
+                <div class="input-prepend restyle no-radius js-normal">
+                    <input type="hidden" value="CN" name="user[mobile_number_country_code]"
+                           id="user_mobile_number_country_code">
+                    <input placeholder="手机号" type="tel" name="user[mobile_number]" id="user_mobile_number">
+                    <i class="iconfont ic-phonenumber"></i>
+                </div>
+                <input type="hidden" name="oversea" id="oversea" value="false">
+                <input type="hidden" name="force_user_nonexist" id="force_user_nonexist" value="true">
+                <div class="input-prepend restyle no-radius security-up-code js-security-number hide">
+                    <input type="text" name="sms_code" id="sms_code" placeholder="手机验证码">
+                    <i class="iconfont ic-verify"></i>
+                    <a tabindex="-1" class="btn-up-resend js-send-code-button disable" href="javascript:void(0);"
+                       id="send_code">发送验证码</a>
+                    <div>
+                        <div class="captcha"><input name="captcha[validation][challenge]" autocomplete="off"
+                                                    type="hidden" value="cc5b01e7d4bb169d263f898d3846c93e">
+                            <input name="captcha[validation][gt]" autocomplete="off" type="hidden"
+                                   value="ec47641997d5292180681a247db3c92e">
+                            <input name="captcha[validation][validate]" autocomplete="off" type="hidden" value="">
+                            <input name="captcha[validation][seccode]" autocomplete="off" type="hidden" value="">
+                            <input name="captcha[id]" autocomplete="off" type="hidden" value="">
+                            <div id="geetest-area" class="geetest"></div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" name="security_number" id="security_number">
+                <div class="input-prepend">
+                    <input placeholder="设置密码" type="password" name="user[password]" id="user_password">
+                    <i class="iconfont ic-password"></i>
+                </div>
+
+                <div class="alert alert-danger"
+                     style="margin-top: 20px;height: 30px;padding: 0;line-height: 30px;display: none"
+                     role="alert" id="error_prompt">
+                    用户昵称格式错误
+                </div>
+
+                <div class="alert alert-success"
+                     style="margin-top: 20px;height: 30px;padding: 0;line-height: 30px;display: none"
+                     role="alert" id="success_normal">
+                    注册成功
+                </div>
+
+                <input type="button" name="commit" value="注册" class="sign-up-button" id="sign_up_btn"
+                       data-disable-with="注册">
+                <p class="sign-up-msg">点击 “注册” 即表示您同意并愿意遵守简书<br> <a target="_blank"
+                                                                    href="http://www.jianshu.com/p/c44d171298ce">用户协议</a>和<a
+                        target="_blank" href="http://www.jianshu.com/p/2ov8x3">隐私政策</a> 。</p>
+            </form>
+
+            <!-- 更多注册方式 -->
+            <div class="more-sign">
+                <h6>社交帐号直接注册</h6>
+                <ul>
+                    <li><a id="weixin" class="weixin" target="_blank" href="/users/auth/wechat"><i
+                            class="iconfont ic-wechat"></i></a></li>
+                    <li><a id="qq" class="qq" target="_blank" href="/users/auth/qq_connect"><i
+                            class="iconfont ic-qq_connect"></i></a></li>
+                </ul>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+<script src="/public/javascripts/jquery_3.4.1.js"></script>
+<script src="/public/javascripts/js-cookie.js"></script>
+<script src="/public/javascripts/globalJs.js"></script>
+<script src="/public/javascripts/sign_up.js"></script>
+</html>

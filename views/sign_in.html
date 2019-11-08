@@ -1,0 +1,107 @@
+<html><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta name="description" content="加入简书，开启你的创作之路，来这里接收世界的赞赏。">
+    <meta name="apple-mobile-web-app-title" content="简书">
+
+    <title>登录 - 简书</title>
+
+    <link rel="stylesheet" media="all" href="/public/stylesheets/web-30728a1164102859481d.css">
+    <link rel="stylesheet" media="all" href="/public/stylesheets/entry-725103a0668ccb1789d4.css">
+    <link href="/public/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="/public/stylesheets/style_https.1.5.6.css" rel="stylesheet">
+</head>
+
+<body class="no-padding reader-black-font" lang="zh-CN">
+<div class="sign">
+    <div class="logo"><a href="/"><img src="/public/images/logo.png" alt="Logo"></a></div>
+    <div class="main">
+
+
+        <h4 class="title">
+            <div class="normal-title">
+                <a class="active" href="/sign_in">登录</a>
+                <b>·</b>
+                <a id="js-sign-up-btn" class="" href="/sign_up">注册</a>
+            </div>
+        </h4>
+        <div class="js-sign-in-container">
+            <form id="new_session" accept-charset="UTF-8" method="post">
+                <!-- 正常登录登录名输入框 -->
+                <div class="input-prepend restyle js-normal">
+                    <input placeholder="昵称" type="text" id="session_nickname">
+                    <i class="iconfont ic-user"></i>
+                </div>
+
+                <!-- 海外登录登录名输入框 -->
+                <div class="input-prepend">
+                    <input placeholder="密码" type="password" id="session_password">
+                    <i class="iconfont ic-password"></i>
+                </div>
+                <input value="false" type="hidden" name="session[oversea]" id="session_oversea">
+                <div>
+                    <input id="sign-in-form-captcha-challenge" name="captcha[validation][challenge]" autocomplete="off"
+                           type="hidden">
+                    <input id="sign-in-form-captcha-gt" name="captcha[validation][gt]" autocomplete="off" type="hidden">
+                    <input id="sign-in-form-captcha-validate" name="captcha[validation][validate]" autocomplete="off"
+                           type="hidden">
+                    <input id="sign-in-form-captcha-seccode" name="captcha[validation][seccode]" autocomplete="off"
+                           type="hidden">
+                </div>
+                <div class="remember-btn" style="float: none;margin-bottom: 0;text-align: left">
+                    <input type="checkbox" value="true" checked="checked" name="session[remember_me]"
+                           id="session_remember_me"><span>记住我</span>
+                </div>
+
+                <div class="alert alert-danger"
+                     style="margin-top: 20px;height: 30px;padding: 0;line-height: 30px;display: none"
+                     role="alert" id="error_prompt">
+                    格式错误
+                </div>
+
+                <div class="alert alert-success"
+                     style="margin-top: 20px;height: 30px;padding: 0;line-height: 30px;display: none"
+                     role="alert" id="success_normal">
+                    登录成功
+                </div>
+
+                <button class="sign-in-button" id="sign-in-form-submit-btn" type="button">
+                    <span id="sign-in-loading"></span>
+                    登录
+                </button>
+            </form>
+            <!-- 更多登录方式 -->
+            <div class="more-sign">
+                <h6>社交帐号登录</h6>
+                <ul>
+                    <li id="weibo-link-wrap" class="">
+                        <a class="weibo" id="weibo-link">
+                            <i class="iconfont ic-weibo"></i>
+                        </a>
+                    </li>
+                    <li><a id="weixin" class="weixin" target="_blank" href="/users/auth/wechat"><i
+                            class="iconfont ic-wechat"></i></a></li>
+                    <li><a id="qq" class="qq" target="_blank" href="/users/auth/qq_connect"><i
+                            class="iconfont ic-qq_connect"></i></a></li>
+                    <li class="js-more-method" id="more"><a href="javascript:void(0);"><i class="iconfont ic-more"></i></a>
+                    </li>
+                    <li class="js-hide-method hide"><a class="douban" target="_blank" href="/users/auth/douban"><i
+                            class="iconfont ic-douban"></i></a></li>
+                </ul>
+
+                <div class="weibo-geetest-captcha"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+
+<script src="/public/javascripts/jquery_3.4.1.js"></script>
+<script src="/public/javascripts/js-cookie.js"></script>
+<script src="/public/javascripts/globalJs.js"></script>
+<script src="/public/javascripts/sign_in.js"></script>
+</html>

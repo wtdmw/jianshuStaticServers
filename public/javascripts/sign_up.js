@@ -61,10 +61,12 @@ var sign_up_inputs = {
                     withCredentials: true //允许跨域
                 },
                 success: function (data) {
+                    console.log(data)
                     sign_up_inputs.methods.normalPrompt()
                     window.location.replace("/sign_in");
                 },
                 error: function (error) {
+                    console.log(error)
                     sign_up_inputs.methods.errorPrompt("注册失败");
                 }
             });

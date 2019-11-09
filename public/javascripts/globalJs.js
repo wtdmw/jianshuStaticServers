@@ -11,8 +11,24 @@ const PUBLIC_METHODS = {
     },
     loginDetection: function () {
         let pathname = window.location.pathname;
-        if (pathname !== "/sign_in" && pathname !== "/sign_up" && pathname !== "/404" && PUBLIC_METHODS.getToken() == null) {
-            //跳转登录页
+        console.log(pathname);
+        console.log(PUBLIC_METHODS.getToken())
+
+        if (pathname === "/404") {
+            return;
+        }
+
+        if (pathname === "/sign_in" || pathname === "/sign_up") {
+
+            if (PUBLIC_METHODS.getToken() === undefined) {
+                return;
+            } else {
+                window.location.replace("/");
+                return;
+            }
+        }
+
+        if (PUBLIC_METHODS.getToken() === undefined) {
             window.location.replace("/sign_in");
         }
     }

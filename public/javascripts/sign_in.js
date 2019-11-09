@@ -61,6 +61,7 @@ var sign_in_inputs = {
                     sign_in_inputs.methods.normalPrompt();
                     //储存token到cookie,使用了js-cookie插件
                     if (data.token !== undefined) {
+                        console.log(data)
                         Cookies.set('token', data.token, {expires: 7, path: '/'});
                         //跳转首页
                         window.location.replace("/");

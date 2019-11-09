@@ -1,15 +1,558 @@
-<!DOCTYPE html>
-<html>
+<html><!--<![endif]-->
 <head>
-    <meta charset="UTF-8">
-    <title>首页</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+
+
+    <meta name="description" content="简书是一个优质的创作社区，在这里，你可以任性地创作，一篇短文、一张照片、一首诗、一幅画……我们相信，每个人都是生活中的艺术家，有着无穷的创造力。">
+    <meta name="keywords" content="简书,简书官网,图文编辑软件,简书下载,图文创作,创作软件,原创社区,小说,散文,写作,阅读">
+
+    <!-- Apple -->
+    <meta name="apple-mobile-web-app-title" content="简书">
+
+    <title>简书 - 创作你的创作</title>
+
+    <link rel="stylesheet" media="all" href="/public/stylesheets/web-30728a1164102859481d.css">
+
+    <link rel="stylesheet" media="all" href="/public/stylesheets/entry-3c635873350a6c5950e9.css">
+
     <link href="/public/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+    <style type="text/css">
+        .youdao-flow-ad {
+            position: relative;
+            display: block;
+            padding: 15px 2px 20px 0;
+            margin: 0 0 15px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        body.reader-night-mode .youdao-flow-ad {
+            border-color: #2f2f2f;
+        }
+
+        .youdao-flow-ad .img {
+            float: right;
+            width: 150px;
+            height: 100px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: RGB(241, 243, 244);
+            border-radius: 4px;
+            margin-left: 15px;
+        }
+
+        body.reader-night-mode .youdao-flow-ad .img {
+            background-color: #4f4f4f;
+        }
+
+        .youdao-flow-ad .info {
+            overflow: hidden;
+        }
+
+        .youdao-flow-ad .info .title {
+            color: #333;
+            line-height: 27px;
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: -4px;
+            cursor: pointer;
+        }
+
+        body.reader-night-mode .youdao-flow-ad .info .title {
+            color: #969696;
+        }
+
+        .youdao-flow-ad .info .intro {
+            font-size: 13px;
+            color: #999;
+            overflow: hidden;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            line-height: 24px;
+            max-height: 48px;
+            -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+            white-space: normal;
+        }
+
+        .youdao-flow-ad .info .ad-badge {
+            position: absolute;
+            left: 0;
+            top: 95px;
+            display: block;
+            width: 38px;
+            height: 18px;
+            line-height: 16px;
+            text-align: center;
+            border-radius: 2px;
+            border: solid 1px #999999;
+            color: #999999;
+            font-size: 12px;
+        }
+
+
+    </style>
+    <style type="text/css">
+
+        .user-follow-button-recommend i, .user-follow-button-recommend span {
+            font-size: 12px !important;
+        }
+
+        .user-follow-button-recommend span {
+            margin-left: 0 !important;
+        }
+
+        .user-follow-button-recommend.normal i, .user-follow-button-recommend.normal span {
+            color: #42C02E !important;
+        }
+
+        .user-follow-button-recommend.toggle i, .user-follow-button-recommend.toggle span {
+            color: #969696 !important;
+        }
+
+        .youdao-img-ad {
+            position: relative;
+            border-radius: 4px;
+            display: block;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 160px;
+            width: 100%;
+            margin-bottom: 20px;
+            overflow: hidden;
+            background-color: RGB(241, 243, 244);
+        }
+
+        body.reader-night-mode .youdao-img-ad {
+            background-color: #4f4f4f;
+        }
+
+        .youdao-img-ad.ad-1 {
+            margin-top: 80px;
+        }
+
+        .youdao-img-ad.ad-2 {
+            margin-top: 70px;
+        }
+
+        .youdao-img-ad .ad-badge {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            color: #fff;
+            background-color: #000;
+            padding: 0 5px;
+            font-size: 12px;
+            line-height: 20px;
+            opacity: 0.7;
+        }
+
+
+
+    </style>
+    <style type="text/css">.style-mode {
+        float: right
+    }</style>
+    <style type="text/css">
+        .nqzzJ71pC-jOnJKAfdtr6_0 {
+            float: right;
+            height: 55px;
+            padding: 15px 0px;
+            margin: 0 12px;
+        }
+
+        ._3tScN0zmSdGLaUAH4SxTbM_0 {
+            width: 100%;
+            height: 100%;
+        }
+
+        .nqzzJ71pC-jOnJKAfdtr6_0 ._3f806byixOPpOPWnx8HiQP_0 {
+            height: 25px;
+        }
+
+        .nqzzJ71pC-jOnJKAfdtr6_0 ._2MIQ6sBppQZAKea91We0qf_0 {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            opacity: 0.6;
+            z-index: 1000;
+        }
+
+        .nqzzJ71pC-jOnJKAfdtr6_0 ._1RppgOJ_CQiXgzd3ke-sbJ_0 {
+            position: fixed;
+            left: -webkit-calc(50% - 190px);
+            left: calc(50% - 190px);
+            top: -webkit-calc(50% - 300px);
+            top: calc(50% - 300px);
+            width: 380px;
+            height: 425px;
+            background-color: #fff;
+            padding: 40px 72px 0;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        body.reader-night-mode .nqzzJ71pC-jOnJKAfdtr6_0 ._1RppgOJ_CQiXgzd3ke-sbJ_0 {
+            background-color: #3f3f3f;
+            color: #c8c8c8;
+        }
+
+        .nqzzJ71pC-jOnJKAfdtr6_0 ._1RppgOJ_CQiXgzd3ke-sbJ_0 h4 {
+            margin: 0;
+            line-height: 25px;
+        }
+
+        .nqzzJ71pC-jOnJKAfdtr6_0 ._1RppgOJ_CQiXgzd3ke-sbJ_0 h4 span {
+            color: #e9634c;
+        }
+
+        .nqzzJ71pC-jOnJKAfdtr6_0 ._1RppgOJ_CQiXgzd3ke-sbJ_0 img {
+            width: 190px;
+            height: 190px;
+            margin: 12px 0 8px 0;
+        }
+
+        .nqzzJ71pC-jOnJKAfdtr6_0 ._1RppgOJ_CQiXgzd3ke-sbJ_0 p {
+            font-size: 14px;
+            line-height: 20px;
+            margin: 0;
+        }
+
+        .nqzzJ71pC-jOnJKAfdtr6_0 ._1RppgOJ_CQiXgzd3ke-sbJ_0 ._2WUz9DZJO5DIC_O5sD1kac_0 {
+            background-color: #e9634c;
+            color: #fff;
+            margin: 25px auto 0;
+            width: 190px;
+            height: 40px;
+            border-radius: 20px;
+            line-height: 40px;
+            font-size: 14px;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
 </head>
-<body>
 
 
+<body lang="zh-CN" class="reader-black-font">
+<!-- 全局顶部导航栏 -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="width-limit">
+        <!-- 左上方 Logo -->
+        <a class="logo" href="/"><img src="/public/images/nav-logo-4c7bbafe27adc892f3046e6978459bac.png" alt="Nav logo"></a>
+
+        <!-- 右上角 -->
+        <!-- 登录显示写文章 -->
+        <a class="btn write-btn" target="_blank" href="/writer#/">
+            <i class="iconfont ic-write"></i>写文章
+        </a>
+        <!-- 如果用户登录，显示下拉菜单 -->
+<!--        开启下拉 class = "user open  "-->
+        <div class="user">
+            <div data-hover="dropdown">
+                <a class="avatar" href="/u/a721216f3cbb"><img
+                        src="/public/images/8b976428-5cbd-4f1b-98c3-f39a189e3401.jfif"
+                        alt="120"></a>
+            </div>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="/u/a721216f3cbb">
+                        <i class="iconfont ic-navigation-profile"></i><span>我的主页</span>
+                    </a></li>
+                <li>
+                    <!-- TODO bookmarks_path -->
+                    <a href="/bookmarks">
+                        <i class="iconfont ic-navigation-mark"></i><span>收藏的文章</span>
+                    </a></li>
+                <li>
+                    <a href="/users/a721216f3cbb/liked_notes">
+                        <i class="iconfont ic-navigation-like"></i><span>喜欢的文章</span>
+                    </a></li>
+                <li>
+                    <a href="/my/paid_notes">
+                        <i class="iconfont ic-paid"></i><span>已购内容</span>
+                    </a></li>
+                <li>
+                    <a href="/wallet">
+                        <i class="iconfont ic-navigation-wallet"></i><span>我的钱包</span>
+                    </a></li>
+                <li>
+                    <a href="/settings">
+                        <i class="iconfont ic-navigation-settings"></i><span>设置</span>
+                    </a></li>
+                <li>
+                    <a href="/faqs">
+                        <i class="iconfont ic-navigation-feedback"></i><span>帮助与反馈</span>
+                    </a></li>
+                <li>
+                    <a rel="nofollow" data-method="delete" href="/sign_out">
+                        <i class="iconfont ic-navigation-signout"></i><span>退出</span>
+                    </a></li>
+            </ul>
+        </div>
+
+
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu"
+                        aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="nav navbar-nav">
+                    <li class="tab active">
+                        <a href="/">
+                            <span class="menu-text">发现</span><i class="iconfont ic-navigation-discover menu-icon"></i>
+                        </a></li>
+                    <li class="tab ">
+                        <a href="/subscriptions">
+                            <span class="menu-text">关注</span><i class="iconfont ic-navigation-follow menu-icon"></i>
+                        </a></li>
+                    <li class="tab notification"><a data-hover="dropdown" href="/notifications"
+                                                    class="notification-btn"><span class="menu-text">消息</span> <i
+                            class="iconfont ic-navigation-notification menu-icon"></i> <!----> <!----></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/notifications#/comments"><i class="iconfont ic-comments"></i> <span>评论</span>
+                                <!----></a></li>
+                            <li><a href="/notifications#/chats"><i class="iconfont ic-chats"></i> <span>简信</span><!---->
+                            </a></li>
+                            <li><a href="/notifications#/requests"><i class="iconfont ic-requests"></i>
+                                <span>投稿请求</span> <!----></a></li>
+                            <li><a href="/notifications#/likes"><i class="iconfont ic-likes"></i> <span>喜欢和赞</span>
+                                <!----></a></li>
+                            <li><a href="/notifications#/follows"><i class="iconfont ic-follows"></i> <span>关注</span>
+                                <!----></a></li>
+                            <li><a href="/notifications#/money"><i class="iconfont ic-money"></i> <span>赞赏和付费</span>
+                                <!----></a></li>
+                            <li><a href="/notifications#/others"><i class="iconfont ic-others"></i> <span>其它提醒</span>
+                                <!----></a></li>
+                        </ul>
+                    </li>
+                    <li class="search">
+                        <form target="_blank" action="/search" accept-charset="UTF-8" method="get"><input name="utf8"
+                                                                                                          type="hidden"
+                                                                                                          value="✓">
+                            <input type="text" name="q" id="q" value="" autocomplete="off" placeholder="搜索"
+                                   class="search-input">
+                            <a class="search-btn" href="javascript:void(null)"><i class="iconfont ic-search"></i></a>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container index">
+    <div class="row">
+        <div class="col-xs-16 main">
+
+            <div class="split-line"></div>
+            <div id="list-container">
+                <!-- 文章列表模块 -->
+                <ul class="note-list">
+
+
+                    <li id="note-52354913" data-note-id="52354913" class="">
+                        <div class="content">
+                            <a class="title" target="_blank"
+                               href="/p/fe96afedb591">“锦鲤女孩”信小呆刷爆信用卡：毁掉一个人最快的方式，是让他一夜暴富</a>
+                            <p class="abstract">
+                                一、 去年十月，支付宝策划了一场全网爆红的“锦鲤”活动。 大奖得主信小呆，集万千宠爱于一身。 各大品牌、各个行业，都可以为她提供兑奖期一年的某项...
+                            </p>
+                            <div class="meta">
+        <span class="jsd-meta">
+          <i class="iconfont ic-paid1"></i> 56.7
+        </span>
+                                <a class="nickname" target="_blank" href="/u/b132fcccb8b6">书写微笑的青春</a>
+                                <a target="_blank" href="/p/fe96afedb591#comments">
+                                    <i class="iconfont ic-list-comments"></i> 83
+                                </a> <span><i class="iconfont ic-list-like"></i> 189</span>
+                            </div>
+                        </div>
+                    </li>
+
+
+
+
+                    <li id="note-52634499" data-note-id="52634499" class="have-img">
+                        <a class="wrap-img" href="" target="_blank">
+                            <img class="  img-blur-done"
+                                 src=""
+                                 alt="120">
+                        </a>
+                        <div class="content">
+                            <a class="title" target="_blank" href="/p/080cfc30ccf6">与皇后婉容私通的侍卫后来怎样了？</a>
+                            <p class="abstract">
+                                从皇帝的角度来说，末代皇帝溥仪是非常悲催的一个皇帝：妃子文绣和他离婚，嫁给了一个平民为妻，皇后婉容则和两个侍卫私通，给他戴上了大大的两顶绿帽子。...
+                            </p>
+                            <div class="meta">
+        <span class="jsd-meta">
+          <i class="iconfont ic-paid1"></i> 25.6
+        </span>
+                                <a class="nickname" target="_blank" href="">挚守静笃</a>
+                                <a target="_blank" href="">
+                                    <i class="iconfont ic-list-comments"></i> 37
+                                </a> <span><i class="iconfont ic-list-like"></i> 145</span>
+                            </div>
+                        </div>
+                    </li>
+
+
+                </ul>
+                <!-- 文章列表模块 -->
+            </div>
+        </div>
+
+
+        <div class="col-xs-7 col-xs-offset-1 aside">
+            <div class="board">
+                <a target="_blank" href="/mobile/club"><img src="/public/images/banner-s-club-aa8bdf19f8cf729a759da42e4a96f366.png" alt="Banner s club"></a>
+                <a utm_medium="index-banner-s" target="_blank" href="/mobile/books?category_id=284"><img src="/public/images/banner-s-7-1a0222c91694a1f38e610be4bf9669be.png" alt="Banner s 7"></a>
+                <a utm_medium="index-banner-s" target="_blank" href="/publications"><img src="/public/images/banner-s-5-4ba25cf5041931a0ed2062828b4064cb.png" alt="Banner s 5"></a>
+                <a target="_blank" href="/c/e048f1a72e3d?utm_medium=index-banner-s&amp;utm_source=desktop"><img src="/public/images/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7.png" alt="Banner s 6"></a>
+            </div>
+
+            <!-- 推荐作者 -->
+            <div class="recommended-author-wrap" style="margin-top: 20px">
+
+                <a
+                    href="https://www.getui.com/2019devfest?f=4&amp;p=10&amp;c=6&amp;ch=1&amp;hmsr=%E7%AE%80%E4%B9%A6&amp;hmpl=2019%E5%BC%80%E5%8F%91%E8%80%85%E8%8A%82&amp;hmcu=PC&amp;hmkw=&amp;hmci="
+                    target="_blank" class="youdao-img-ad ad-1 getui-ad"><span class="ad-badge">广告</span></a> <!---->
+                <div class="recommended-authors">
+                    <div class="title"><span>推荐作者</span> <a class="page-change"><i class="iconfont ic-search-change"
+                                                                                   style="transform: rotate(0deg);"></i>
+                        换一批
+                    </a></div>
+                    <ul class="list">
+                        <li><a href="/u/080bb4eac1c9?utm_source=desktop&amp;utm_medium=index-users" target="_blank"
+                               class="avatar"><img
+                                src="//upload.jianshu.io/users/upload_avatars/13213889/7314c5cc-ca7f-4542-b914-2c8dffaf324d.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp"></a>
+                            <a class="follow" state="0"><i class="iconfont ic-follow"></i>关注
+                            </a> <a href="/u/080bb4eac1c9?utm_source=desktop&amp;utm_medium=index-users" target="_blank"
+                                    class="name">
+                                无限猴子
+                            </a>
+                            <p>
+                                写了416.9k字 · 2.2k喜欢
+                            </p></li>
+                        <li><a href="/u/c5a2ce84f60b?utm_source=desktop&amp;utm_medium=index-users" target="_blank"
+                               class="avatar"><img
+                                src="//upload.jianshu.io/users/upload_avatars/14715425/e0668349-8c75-43db-8a9d-c388e5f00d0d.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp"></a>
+                            <a class="follow" state="0"><i class="iconfont ic-follow"></i>关注
+                            </a> <a href="/u/c5a2ce84f60b?utm_source=desktop&amp;utm_medium=index-users" target="_blank"
+                                    class="name">
+                                简书钻首席小管家
+                            </a>
+                            <p>
+                                写了197.1k字 · 151.4k喜欢
+                            </p></li>
+                        <li><a href="/u/51b4ef597b53?utm_source=desktop&amp;utm_medium=index-users" target="_blank"
+                               class="avatar"><img
+                                src="//upload.jianshu.io/users/upload_avatars/9988193/fc26c109-1ae6-4327-a298-2def343e9cd8.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp"></a>
+                            <a class="follow" state="0"><i class="iconfont ic-follow"></i>关注
+                            </a> <a href="/u/51b4ef597b53?utm_source=desktop&amp;utm_medium=index-users" target="_blank"
+                                    class="name">
+                                董克平日记
+                            </a>
+                            <p>
+                                写了747.5k字 · 2.2k喜欢
+                            </p></li>
+                        <li><a href="/u/ef4f2422125f?utm_source=desktop&amp;utm_medium=index-users" target="_blank"
+                               class="avatar"><img
+                                src="//upload.jianshu.io/users/upload_avatars/301940/189d69dd-af7c-4290-9e2c-89e98acf3603.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp"></a>
+                            <a class="follow" state="0"><i class="iconfont ic-follow"></i>关注
+                            </a> <a href="/u/ef4f2422125f?utm_source=desktop&amp;utm_medium=index-users" target="_blank"
+                                    class="name">
+                                卢璐说
+                            </a>
+                            <p>
+                                写了1268k字 · 27.5k喜欢
+                            </p></li>
+                        <li><a href="/u/ca5b9d6f94dc?utm_source=desktop&amp;utm_medium=index-users" target="_blank"
+                               class="avatar"><img
+                                src="//upload.jianshu.io/users/upload_avatars/3950651/acfaa0ce-42fe-424a-b7c8-9a0136fb96ec.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp"></a>
+                            <a class="follow" state="0"><i class="iconfont ic-follow"></i>关注
+                            </a> <a href="/u/ca5b9d6f94dc?utm_source=desktop&amp;utm_medium=index-users" target="_blank"
+                                    class="name">
+                                三儿王屿
+                            </a>
+                            <p>
+                                写了166.8k字 · 3.5k喜欢
+                            </p></li>
+                    </ul>
+                    <a href="/recommendations/users?utm_source=desktop&amp;utm_medium=index-users" target="_blank"
+                       class="find-more">
+                        查看全部<i class="iconfont ic-link"></i></a> <!----></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="side-tool">
+    <ul>
+        <li data-placement="left" data-toggle="tooltip" data-container="body" data-original-title="回到顶部"
+            style="display: none;"><a class="function-button"><i class="iconfont ic-backtop"></i></a></li> <!---->
+        <!----> <!----> <!----> <!----> <!----></ul>
+</div>
+<footer class="container">
+    <div class="row">
+        <div class="col-xs-17 main">
+
+
+            <a target="_blank" href="http://www.jianshu.com/c/jppzD2">关于简书</a><em> · </em><a target="_blank"
+                                                                                             href="http://www.jianshu.com/contact">联系我们</a><em>
+            · </em><a target="_blank" href="http://www.jianshu.com/c/bfeec2e13990">加入我们</a><em> · </em><a
+                target="_blank" href="http://www.jianshu.com/p/fc1c113e5b6b">简书出版</a><em> · </em><a target="_blank"
+                                                                                                    href="http://www.jianshu.com/press">品牌与徽标</a><em>
+            · </em><a target="_blank" href="http://www.jianshu.com/faqs">帮助中心</a><em> · </em><a target="_blank"
+                                                                                                href="http://www.jianshu.com/p/cabc8fa39830">合作伙伴</a>
+            <div class="icp">
+                ©2012-2019 上海佰集信息科技有限公司 / 简书 / 沪ICP备11018329号-5 /
+                <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402002252">
+                    <img src="/public/images/smrz-557fa318122c99a66523209bf9753a27.png" alt="Smrz">
+                </a> <a target="_blank"
+                        href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402002252">沪公网安备31010402002252号
+                / </a>
+                <a target="_blank" href="http://www.shjbzx.cn/">
+                    <img src="/public/images/wxb-a216456895eb66c17497dbd3da443cf8.png" alt="Wxb">
+                </a> 简书网举报电话：021-34770013 /
+                <a target="_blank" href="javascript:void(null)">
+                    <img src="/public/images/fanzha-10518f0f6b33635180b190975ae68ca6.jpg" alt="Fanzha">
+                </a> 亲爱的市民朋友，上海警方反诈劝阻电话“962110”系专门针对避免您财产被骗受损而设，请您一旦收到来电，立即接听 /
+                <a target="_blank"
+                   href="">
+                    <img src="/public/images/zggsrz-5695587dccf490ca3e651f4228f7479e.png" alt="Zggsrz">
+                </a></div>
+        </div>
+    </div>
+</footer>
 </body>
-<script src="/public/javascripts/jquery_3.4.1.js"></script>
-<script src="/public/javascripts/js-cookie.js"></script>
-<script src="/public/javascripts/globalJs.js"></script>
 </html>

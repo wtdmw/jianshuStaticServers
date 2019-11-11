@@ -31,6 +31,9 @@ const PUBLIC_METHODS = {
         if (PUBLIC_METHODS.getToken() === undefined) {
             window.location.replace("/sign_in");
         }
+    },
+    abbreviationDisplay: function (data) {
+        return data.slice(0, 60) + "..."
     }
 };
 

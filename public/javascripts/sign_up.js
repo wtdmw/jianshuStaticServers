@@ -98,3 +98,6 @@ $("#user_nickname,#user_mobile_number,#user_password").focus(function (e) {
     sign_up_inputs.methods.offErrorPrompt();
 });
 
+
+
+

@@ -34,6 +34,10 @@ const PUBLIC_METHODS = {
     },
     abbreviationDisplay: function (data) {
         return data.slice(0, 60) + "..."
+    },
+    outLogin: function () {
+        Cookies.remove('token');
+        window.location.replace("/sign_in");
     }
 };
 
@@ -42,3 +46,15 @@ const PUBLIC_METHODS = {
     //登录检查
     PUBLIC_METHODS.loginDetection();
 })();
+
+//导航栏
+$("#navbar-my").hover(function () {
+        $("#navbar-my").addClass("open");
+    },
+    function () {
+        $("#navbar-my").removeClass("open");
+    });
+
+$("#outlogin").click(function () {
+    PUBLIC_METHODS.outLogin()
+});

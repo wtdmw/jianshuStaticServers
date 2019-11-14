@@ -1,0 +1,355 @@
+<html><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+
+    <meta name="apple-mobile-web-app-title" content="简书">
+
+
+    <title>消息 - 简书</title>
+    <link href="/public/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+    <link rel="stylesheet" media="all" href="/public/stylesheets/web-30728a1164102859481d.css">
+
+    <link rel="stylesheet" media="all"
+          href="/public/stylesheets/entry-48e69bcff242202e8c15.css">
+
+
+    <style type="text/css">
+        .nqzzJ71pC-jOnJKAfdtr6_0 {
+            float: right;
+            height: 55px;
+            padding: 15px 0px;
+            margin: 0 12px;
+        }
+
+        ._3tScN0zmSdGLaUAH4SxTbM_0 {
+            width: 100%;
+            height: 100%;
+        }
+
+        .nqzzJ71pC-jOnJKAfdtr6_0 ._3f806byixOPpOPWnx8HiQP_0 {
+            height: 25px;
+        }
+
+        .nqzzJ71pC-jOnJKAfdtr6_0 ._2MIQ6sBppQZAKea91We0qf_0 {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            opacity: 0.6;
+            z-index: 1000;
+        }
+
+        .nqzzJ71pC-jOnJKAfdtr6_0 ._1RppgOJ_CQiXgzd3ke-sbJ_0 {
+            position: fixed;
+            left: -webkit-calc(50% - 190px);
+            left: calc(50% - 190px);
+            top: -webkit-calc(50% - 300px);
+            top: calc(50% - 300px);
+            width: 380px;
+            height: 425px;
+            background-color: #fff;
+            padding: 40px 72px 0;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        body.reader-night-mode .nqzzJ71pC-jOnJKAfdtr6_0 ._1RppgOJ_CQiXgzd3ke-sbJ_0 {
+            background-color: #3f3f3f;
+            color: #c8c8c8;
+        }
+
+        .nqzzJ71pC-jOnJKAfdtr6_0 ._1RppgOJ_CQiXgzd3ke-sbJ_0 h4 {
+            margin: 0;
+            line-height: 25px;
+        }
+
+        .nqzzJ71pC-jOnJKAfdtr6_0 ._1RppgOJ_CQiXgzd3ke-sbJ_0 h4 span {
+            color: #e9634c;
+        }
+
+        .nqzzJ71pC-jOnJKAfdtr6_0 ._1RppgOJ_CQiXgzd3ke-sbJ_0 img {
+            width: 190px;
+            height: 190px;
+            margin: 12px 0 8px 0;
+        }
+
+        .nqzzJ71pC-jOnJKAfdtr6_0 ._1RppgOJ_CQiXgzd3ke-sbJ_0 p {
+            font-size: 14px;
+            line-height: 20px;
+            margin: 0;
+        }
+
+        .nqzzJ71pC-jOnJKAfdtr6_0 ._1RppgOJ_CQiXgzd3ke-sbJ_0 ._2WUz9DZJO5DIC_O5sD1kac_0 {
+            background-color: #e9634c;
+            color: #fff;
+            margin: 25px auto 0;
+            width: 190px;
+            height: 40px;
+            border-radius: 20px;
+            line-height: 40px;
+            font-size: 14px;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+    <style type="text/css">.user-follow-button {
+        padding: 8px 0;
+        width: 100px;
+        float: right;
+        font-size: 15px
+    }</style>
+    <style type="text/css">
+        /*@charset "UTF-8";*/
+        /*
+         * 变量
+        */
+        .comment-images {
+            display: block;
+            width: 338px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            position: relative;
+            font-size: 0;
+        }
+
+        .comment-images .image {
+            position: relative;
+            border-radius: 4px;
+            background-position: center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            overflow: hidden;
+            background-size: cover;
+            display: inline-block;
+            height: 110px;
+            width: 110px;
+            border: 1px solid #f0f0f0;
+        }
+
+        body.reader-night-mode .comment-images .image {
+            border-color: #2f2f2f;
+        }
+
+        .comment-images .image:not(:nth-child(3n)) {
+            margin-right: 4px;
+        }
+
+        .comment-images .image:nth-child(n + 4) {
+            margin-top: 4px;
+        }
+
+        .comment-images .image.is-long:after {
+            content: '\957F\56FE';
+            position: absolute;
+            left: 100%;
+            bottom: 0;
+            margin-left: -32px;
+            width: 32px;
+            height: 28px;
+            font-size: 12px;
+            text-align: center;
+            line-height: 28px;
+            background-color: #2f2f2f;
+            opacity: 0.5;
+            color: #fff;
+        }
+
+        .comment-images .collapsed-btn {
+            display: block;
+            color: #3194d0;
+            font-size: 15px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .comment-images .mask {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 32%;
+            border-radius: 2px;
+            background-color: rgba(47, 47, 47, 0.6);
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .comment-images .mask span {
+            font-size: 15px;
+            color: #fff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<!-- 只给10%的用户添加代码 -->
+<!-- ###第四范式-智能推荐：代码直接复制 无需修改参数### -->
+<!-- ###功能：上报内容并反馈用户行为### -->
+<!--
+-->
+<body lang="zh-CN" class="reader-black-font" style="overflow-y: scroll;">
+<!-- 全局顶部导航栏 -->
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="width-limit">
+        <!-- 左上方 Logo -->
+        <a class="logo" href="/"><img src="/public/images/nav-logo-4c7bbafe27adc892f3046e6978459bac.png" alt="Nav logo"></a>
+
+        <!-- 右上角 -->
+        <!-- 登录显示写文章 -->
+        <a class="btn write-btn" target="_blank" href="/writer#/">
+            <i class="iconfont ic-write"></i>写文章
+        </a>
+        <!-- 如果用户登录，显示下拉菜单 -->
+        <!--        开启下拉 class = "user open  "-->
+        <div class="user" id="navbar-my">
+            <div data-hover="dropdown">
+                <a class="avatar" href="/u/a721216f3cbb"><img
+                        src="/public/images/8b976428-5cbd-4f1b-98c3-f39a189e3401.jfif"
+                        alt="120"></a>
+            </div>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="/u/a721216f3cbb">
+                        <i class="iconfont ic-navigation-profile"></i><span>我的主页</span>
+                    </a></li>
+                <li>
+                    <!-- TODO bookmarks_path -->
+                    <a href="/bookmarks">
+                        <i class="iconfont ic-navigation-mark"></i><span>收藏的文章</span>
+                    </a></li>
+                <li>
+                    <a href="/users/a721216f3cbb/liked_notes">
+                        <i class="iconfont ic-navigation-like"></i><span>喜欢的文章</span>
+                    </a></li>
+                <li>
+                    <a href="/my/paid_notes">
+                        <i class="iconfont ic-paid"></i><span>已购内容</span>
+                    </a></li>
+                <li>
+                    <a href="/wallet">
+                        <i class="iconfont ic-navigation-wallet"></i><span>我的钱包</span>
+                    </a></li>
+                <li>
+                    <a href="/settings">
+                        <i class="iconfont ic-navigation-settings"></i><span>设置</span>
+                    </a></li>
+                <li>
+                    <a href="/faqs">
+                        <i class="iconfont ic-navigation-feedback"></i><span>帮助与反馈</span>
+                    </a></li>
+                <li>
+                    <a rel="nofollow" data-method="delete" href="javascript:void(0);" id="outlogin">
+                        <i class="iconfont ic-navigation-signout"></i><span>退出</span>
+                    </a></li>
+            </ul>
+        </div>
+
+
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu"
+                        aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="nav navbar-nav">
+                    <li class="tab ">
+                        <a href="/">
+                            <span class="menu-text">发现</span><i class="iconfont ic-navigation-discover menu-icon"></i>
+                        </a></li>
+                    <li class="tab ">
+                        <a href="/subscriptions">
+                            <span class="menu-text">关注</span><i class="iconfont ic-navigation-follow menu-icon"></i>
+                        </a></li>
+                    <li class="tab active">
+                        <a data-hover="dropdown" href="/comment" class="notification-btn">
+                            <span class="menu-text">消息</span>
+                            <i class="iconfont ic-navigation-notification menu-icon">
+                           </i> <!----> <!----></a>
+                    <ul class="dropdown-menu">
+                            <li><a href="/notifications#/comments"><i class="iconfont ic-comments"></i> <span>评论</span>
+                                <!----></a></li>
+                            <li><a href="/notifications#/chats"><i class="iconfont ic-chats"></i> <span>简信</span><!---->
+                            </a></li>
+                            <li><a href="/notifications#/requests"><i class="iconfont ic-requests"></i>
+                                <span>投稿请求</span> <!----></a></li>
+                            <li><a href="/notifications#/likes"><i class="iconfont ic-likes"></i> <span>喜欢和赞</span>
+                                <!----></a></li>
+                            <li><a href="/notifications#/follows"><i class="iconfont ic-follows"></i> <span>关注</span>
+                                <!----></a></li>
+                            <li><a href="/notifications#/money"><i class="iconfont ic-money"></i> <span>赞赏和付费</span>
+                                <!----></a></li>
+                            <li><a href="/notifications#/others"><i class="iconfont ic-others"></i> <span>其它提醒</span>
+                                <!----></a></li>
+                        </ul>
+                    </li>
+                    <li class="search">
+                        <form target="_blank" action="/search" accept-charset="UTF-8" method="get"><input name="utf8"
+                                                                                                          type="hidden"
+                                                                                                          value="✓">
+                            <input type="text" name="q" id="q" value="" autocomplete="off" placeholder="搜索"
+                                   class="search-input">
+                            <a class="search-btn" href="javascript:void(null)"><i class="iconfont ic-search"></i></a>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container notification">
+    <div class="row">
+        <div class="aside" id="left-list">
+            <ul>
+                <li class="router-link-exact-active active"><a href="javascript:void(0);"><i
+                        class="iconfont ic-comments"></i> <span>评论</span> <!----></a></li>
+                <li class=""><a href="javascript:void(0);"><i class="iconfont ic-chats"></i> <span>简信</span></a></li>
+                <li class=""><a href="javascript:void(0);"><i class="iconfont ic-likes"></i> <span>喜欢和赞</span><!---->
+                </a></li>
+                <li class=""><a href="javascript:void(0);"><i class="iconfont ic-follows"></i> <span>关注</span>
+                    <!----></a></li>
+            </ul>
+        </div>
+        <div class="col-xs-16 col-xs-offset-8 main" id="right-list">
+
+        </div>
+    </div>
+</div>
+
+<script src="/public/javascripts/jquery_3.4.1.js"></script>
+<script src="/public/javascripts/js-cookie.js"></script>
+<script src="/public/javascripts/globalJs.js"></script>
+<script src="/public/javascripts/comment.js"></script>
+</body>
+</html>

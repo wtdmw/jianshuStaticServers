@@ -71,8 +71,8 @@ var follows = {
 
                     $("#rightNav").empty();
                     if (data.user.avatarPath !== '' && data.user.nickName !== '') {
-                        let htmls = `<a  target="_blank" class="avatar"><img src="${data.user.avatarPath}"></a> <a href="/u/4ce7aca123a3" target="_blank" class="btn btn-hollow">
-      个人主页<i class="iconfont ic-link"></i></a> <div class="title"><a href="/u/4ce7aca123a3" target="_blank" class="name">${data.user.nickName}</a> <img src="//upload.jianshu.io/user_badge/f17e9e0e-33aa-47c9-a444-4270e511654a" data-toggle="tooltip" data-original-title="简书签约作者" class="badge-icon"> <i class="iconfont ic-woman"></i></div> <div class="info">写了267331字，获得了1455个喜欢</div>`
+                        let htmls = `<a href="/myhome?userId=${data.user.id}" target="_blank" class="avatar"><img src="${data.user.avatarPath}"></a> <a href="/myhome?userId=${data.user.id}" target="_blank" class="btn btn-hollow">
+      个人主页<i class="iconfont ic-link"></i></a> <div class="title"><a href="/myhome?userId=${data.user.id}" target="_blank" class="name">${data.user.nickName}</a> <img src="//upload.jianshu.io/user_badge/f17e9e0e-33aa-47c9-a444-4270e511654a" data-toggle="tooltip" data-original-title="简书签约作者" class="badge-icon"> <i class="iconfont ic-woman"></i></div> <div class="info">写了267331字，获得了1455个喜欢</div>`
                         $("#rightNav").append(htmls);
                     }
 

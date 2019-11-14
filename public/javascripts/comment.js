@@ -34,6 +34,7 @@ var comment = {
 
         },
         pingLun: function (data) {
+            // console.log(data)
             //清空table表格
             $("#right-list").empty();
             $("#right-list").append('<div><div class="menu">收到的评论</div><ul class="comment-list" id="comment"></ul><div></div></div>');
@@ -48,10 +49,10 @@ var comment = {
                 var article_comment_time = (date.getFullYear() + "-" + month + "-" + day + "&nbsp;"
                     + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds());
                 html += `
-                 <li class=""><a href="/u/f88cd344aa8f" class="avatar"><img
+                 <li class=""><a href="/myhome?userId=${item.commentUserId}" class="avatar"><img
                     src="${item.avatarPath}"></a>
                 <div class="info">
-                    <div><a class="user" href="/u/f88cd344aa8f">${item.nickName}</a><span class="comment-slogan">评论了你的文章</span><a
+                    <div><a class="user" href="/myhome?userId=${item.commentUserId}">${item.nickName}</a><span class="comment-slogan">评论了你的文章</span><a
                             href="/p/5669de633eab" '="">《${item.title}》</a></div>
                     <div class="time">${article_comment_time}</div>
                 </div>
@@ -80,9 +81,9 @@ var comment = {
                 // console.log(date);
                 var article_comment_time = (date.getFullYear() + "-" + month + "-" + day + "&nbsp;"
                     + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds());
-                html += `<li class=""><a href="/u/f88cd344aa8f" class="avatar"><img
+                html += `<li class=""><a href="/myhome?userId=${item.likesUserId}" class="avatar"><img
                     src="${item.avatarPath}"></a>
-                <div class="info"><a href="/u/f88cd344aa8f" class="user">${item.nickName}</a> <span>喜欢了你的文章</span> <a
+                <div class="info"><a href="/myhome?userId=${item.likesUserId}" class="user">${item.nickName}</a> <span>喜欢了你的文章</span> <a
                         href="/p/5669de633eab">《${item.title}》</a>
                     <div class="time">${article_comment_time}</div>
                 </div>
@@ -105,7 +106,7 @@ var comment = {
                     + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds());
 
                 html += `
-                <li class=" " followUserid="${item.id}"><a href="/u/58941f3b750d" class="avatar"><img src="${item.avatarPath}"></a> <div class="info"><a href="/u/58941f3b750d" class="user">${item.nickName}</a> <span>关注了你</span> <div class="time">${article_comment_time}</div></div> <a class="${comment.method.towFollowQu(item.id) ? "btn btn-default following" : "btn btn-success follow"}"><i class="iconfont ${comment.method.towFollowQu(item.id) ? "ic-followed" : "ic-follow"}"></i><span>${comment.method.towFollowQu(item.id) ? "已关注" : "关注"}</span></a></li>
+                <li class=" " followUserid="${item.id}"><a href="/myhome?userId=${item.id}" class="avatar"><img src="${item.avatarPath}"></a> <div class="info"><a href="/myhome?userId=${item.id}" class="user">${item.nickName}</a> <span>关注了你</span> <div class="time">${article_comment_time}</div></div> <a class="${comment.method.towFollowQu(item.id) ? "btn btn-default following" : "btn btn-success follow"}"><i class="iconfont ${comment.method.towFollowQu(item.id) ? "ic-followed" : "ic-follow"}"></i><span>${comment.method.towFollowQu(item.id) ? "已关注" : "关注"}</span></a></li>
                 `
             });
             $("#follow").append(html);

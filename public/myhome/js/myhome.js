@@ -11,18 +11,33 @@ function getQueryVariable(variable) {
 }
 
 function getLocalTime(nS) {
-    return new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');
+    return new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ');
 }
 
-/*获取url参数*/
-let userId = Cookies.get('id');
-if (userId===""||userId==null){
-    window.location="404";
+// ?userId=14e52e9a4a48
+
+//
+// url获取
+
+
+//cookie获取
+let userId = "";
+
+
+let queryString = PUBLIC_METHODS.getQueryString(`userId`);
+if (queryString !== null) {
+    userId = queryString
+} else {
+    userId = Cookies.get('id');
+}
+
+if (userId === "" || userId == null) {
+    window.location = "404";
 }
 
 /*定义页面变量*/
-let currentPage=0;
-let currentLogUser="";
+let currentPage = 0;
+let currentLogUser = "";
 
 
 /*获取个人信息，关注 粉丝 点赞 文章数*/
@@ -110,17 +125,17 @@ $.ajax({
         }
 
     },
-    error:function () {
-        window.location="index";
+    error: function () {
+        window.location = "index";
     }
 
 })
 
 /*获取文章*/
-function getArticle(currentPage){
+function getArticle(currentPage) {
     $.ajax({
         url: GLOBAL_DATA.API_SERVER_URL + "/u/getArticleList",
-        data: {userId: userId,currentPage:currentPage},
+        data: {userId: userId, currentPage: currentPage},
         type: "Get",
         dataType: "json",
         contentType: "application/text;charsetset=UTF-8",
@@ -129,16 +144,16 @@ function getArticle(currentPage){
             withCredentials: true //允许跨域
         },
 
-        success: function (data){
-            if (data.code == 100&&data.message=="获取成功") {
+        success: function (data) {
+            if (data.code == 100 && data.message == "获取成功") {
                 let articleList = data.extend.list;
-                let ariticle ="";
-                currentLogUser =data.extend.currentLogUser;
+                let ariticle = "";
+                currentLogUser = data.extend.currentLogUser;
 
-                $.each(articleList,function (index,ele) {
+                $.each(articleList, function (index, ele) {
                         let time = getLocalTime(ele.timeStamp);
-                        let content =ele.content.substring(0,70);
-                        let img= ele.contentImg;
+                        let content = ele.content.substring(0, 70);
+                        let img = ele.contentImg;
                         // if (img==null||img==""){
                         //     img ="https://upload-images.jianshu.io/upload_images/13895669-ce9aac19c6c4da1b?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/240";
                         // }
@@ -175,30 +190,31 @@ function getArticle(currentPage){
                 // $("#list-container img").each(function (index,ele) {
                 //    $(this).attr("src",arrImg[index]);
                 // });
-            }else if (data.code==200){window.location="404.html"}
+            } else if (data.code == 200) {
+                window.location = "404.html"
+            }
         }
-        });
+    });
 };
 
-if (currentPage==0){
+if (currentPage == 0) {
     getArticle(currentPage);
 }
 
 $("#yuedugengduo").click(function () {
     currentPage = currentPage + 1;
     getArticle(currentPage);
-    });
+});
 $(".trigger-menu li").click(function () {
-    currentPage=0;
+    currentPage = 0;
     $(this).siblings().removeClass("active");
     $(this).addClass("active");
     var lastSelect = $(".trigger-menu li[class='active']");
     $("#list-container ul").empty();
-    if ($(this).index()==0){
+    if ($(this).index() == 0) {
         getArticle(currentPage);
 
     }
-
 
 
 })

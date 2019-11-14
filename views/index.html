@@ -514,4 +514,15 @@
 <script src="/public/javascripts/js-cookie.js"></script>
 <script src="/public/javascripts/globalJs.js"></script>
 <script src="/public/javascripts/index.js"></script>
+
+
+<script>
+    $(function () {
+       $(document).on('click','.title',function () {
+           var Aid = $(this).next().html();
+           url = "article_detail.html?Aid=" + Aid;
+           window.location.href = url;
+       })
+    });
+</script>
 </html>

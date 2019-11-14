@@ -44,7 +44,9 @@ var index = {
                         </a>
 
                         <div class="content">
-                            <a class="title" target="_blank" href="/p/080cfc30ccf6">${n.title}</a>
+                            <a class="title" target="_blank" href="">${n.title}</a>
+                            <span class="Aid" style="display: none">${n.id}</span>
+<!--                            /p/080cfc30ccf6-->
                             <p class="abstract">
                                 ${PUBLIC_METHODS.abbreviationDisplay(n.content)}
                             </p>
@@ -62,7 +64,8 @@ var index = {
                        <li id="note-52354913" data-note-id="52354913" class="">
                         <div class="content">
                             <a class="title" target="_blank"
-                               href="/p/fe96afedb591">${n.title}</a>
+                               href="">${n.title}</a>
+                               <span class="Aid" style="display: none">${n.id}</span>
                             <p class="abstract">
                              ${PUBLIC_METHODS.abbreviationDisplay(n.content)}
                             </p>

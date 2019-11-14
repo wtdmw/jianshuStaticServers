@@ -40,9 +40,71 @@ const PUBLIC_METHODS = {
         window.location.replace("/sign_in");
     },
     getQueryString: function (key) {
-        var reg = new RegExp("(^|&)"+key+"=([^&]*)(&|$)");
+        var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
         var result = window.location.search.substr(1).match(reg);
-        return result?decodeURIComponent(result[2]):null;
+        return result ? decodeURIComponent(result[2]) : null;
+    },
+    followUser: function (followUserid, fn) {
+        // 关注用户
+        // 传入被关注用户的id
+        // fn 成功回调函数
+        let data = {
+            followUserid: followUserid
+        };
+
+        $.ajax({
+            url: GLOBAL_DATA.API_SERVER_URL + "/follow",
+            data: JSON.stringify(data),
+            type: "POST",
+            dataType: "json",
+            timeout: 4000,
+            contentType: "application/json;charset=utf-8",
+            xhrFields: {
+                withCredentials: true //允许跨域
+            },
+            success: function (data) {
+                console.log(data)
+                if (data.data === "ok") {
+                    fn("ok");
+                }
+
+            },
+            error: function (error) {
+                console.log(error)
+            }
+        });
+
+    },
+    unfollowUser: function (followUserid, fn) {
+        // 关注用户
+        // 传入被关注用户的id
+        // fn 成功回调函数
+        let data = {
+            followUserid: followUserid
+        };
+
+        $.ajax({
+            url: GLOBAL_DATA.API_SERVER_URL + "/follow",
+            data: JSON.stringify(data),
+            type: "DELETE",
+            dataType: "json",
+            timeout: 4000,
+            contentType: "application/json;charset=utf-8",
+            xhrFields: {
+                withCredentials: true //允许跨域
+            },
+            success: function (data) {
+                console.log(data)
+                if (data.data === "ok") {
+                    fn("ok");
+                }
+
+            },
+            error: function (error) {
+                console.log(error)
+            }
+        });
+
     }
 };
 

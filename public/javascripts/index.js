@@ -90,5 +90,5 @@ var index = {
 //点击阅读更多
 $("#yuedugengduo").click(function () {
     index.methods.getArticlesListAjax()
-})
+});
 

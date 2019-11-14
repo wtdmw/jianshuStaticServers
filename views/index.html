@@ -270,7 +270,7 @@
         </a>
         <!-- 如果用户登录，显示下拉菜单 -->
         <!--        开启下拉 class = "user open  "-->
-        <div class="user">
+        <div class="user" id="navbar-my">
             <div data-hover="dropdown">
                 <a class="avatar" href="/u/a721216f3cbb"><img
                         src="/public/images/8b976428-5cbd-4f1b-98c3-f39a189e3401.jfif"
@@ -307,7 +307,7 @@
                         <i class="iconfont ic-navigation-feedback"></i><span>帮助与反馈</span>
                     </a></li>
                 <li>
-                    <a rel="nofollow" data-method="delete" href="/sign_out">
+                    <a rel="nofollow" data-method="delete" href="javascript:void(0);" id="outlogin">
                         <i class="iconfont ic-navigation-signout"></i><span>退出</span>
                     </a></li>
             </ul>
@@ -333,7 +333,7 @@
                         <a href="/subscriptions">
                             <span class="menu-text">关注</span><i class="iconfont ic-navigation-follow menu-icon"></i>
                         </a></li>
-                    <li class="tab notification"><a data-hover="dropdown" href="/notifications"
+                    <li class="tab notification"><a data-hover="dropdown" href="/comment"
                                                     class="notification-btn"><span class="menu-text">消息</span> <i
                             class="iconfont ic-navigation-notification menu-icon"></i> <!----> <!----></a>
                         <ul class="dropdown-menu">
@@ -377,56 +377,6 @@
             <div id="list-container">
                 <!-- 文章列表模块 -->
                 <ul class="note-list">
-
-
-                    <!--<li id="note-52354913" data-note-id="52354913" class="">
-                        <div class="content">
-                            <a class="title" target="_blank"
-                               href="/p/fe96afedb591">“锦鲤女孩”信小呆刷爆信用卡：毁掉一个人最快的方式，是让他一夜暴富</a>
-                            <p class="abstract">
-                                一、 去年十月，支付宝策划了一场全网爆红的“锦鲤”活动。 大奖得主信小呆，集万千宠爱于一身。 各大品牌、各个行业，都可以为她提供兑奖期一年的某项...
-                            </p>
-                            <div class="meta">
-        <span class="jsd-meta">
-          <i class="iconfont ic-paid1"></i> 56.7
-        </span>
-                                <a class="nickname" target="_blank" href="/u/b132fcccb8b6">书写微笑的青春</a>
-                                <a target="_blank" href="/p/fe96afedb591#comments">
-                                    <i class="iconfont ic-list-comments"></i> 83
-                                </a> <span><i class="iconfont ic-list-like"></i> 189</span>
-                            </div>
-                        </div>
-                    </li>-->
-
-
-                   <!-- <li id="note-52634499" data-note-id="52634499" class="have-img">
-
-                        <a class="wrap-img" href="" target="_blank">
-                            <img class="  img-blur-done"
-                                 src=""
-                                 alt="120">
-                        </a>
-
-                        <div class="content">
-                            <a class="title" target="_blank" href="/p/080cfc30ccf6">与皇后婉容私通的侍卫后来怎样了？</a>
-                            <p class="abstract">
-                                从皇帝的角度来说，末代皇帝溥仪是非常悲催的一个皇帝：妃子文绣和他离婚，嫁给了一个平民为妻，皇后婉容则和两个侍卫私通，给他戴上了大大的两顶绿帽子。...
-                            </p>
-                            <div class="meta">
-        <span class="jsd-meta">
-          <i class="iconfont ic-paid1"></i> 25.6
-        </span>
-                                <a class="nickname" target="_blank" href="">挚守静笃</a>
-                                <a target="_blank" href="">
-                                    <i class="iconfont ic-list-comments"></i> 37
-                                </a> <span><i class="iconfont ic-list-like"></i> 145</span>
-                            </div>
-                        </div>
-                    </li>-->
-
-
-
-
                 </ul>
                 <!-- 文章列表模块 -->
                 <a id="yuedugengduo" class="load-more">阅读更多</a>
@@ -445,7 +395,6 @@
                 <a target="_blank" href="/c/e048f1a72e3d?utm_medium=index-banner-s&amp;utm_source=desktop"><img
                         src="/public/images/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7.png" alt="Banner s 6"></a>
             </div>
-
             <!-- 推荐作者 -->
             <div class="recommended-author-wrap" style="margin-top: 20px">
 

@@ -1,116 +1,118 @@
-$(function () {
-  $(".search .search-btn").click(function () {
-      getNote();
-  })
+//页面加载获取参数请求
+(function () {
+    let queryString = PUBLIC_METHODS.getQueryString(`searchValu`);
+    $("#q").val(queryString)
+    getNote();
+    console.log(queryString)
+})();
+
+$(".search .search-btn").click(function () {
+    getNote();
+})
 
 /*    $(".menu li").click(function () {
         $(this).siblings('li').removeClass('active');
         $(this).addClass('active');
     });*/
 
-    $("#note").click(function () {
-        getNote()
-    });
+$("#note").click(function () {
+    getNote()
+});
 
-    $("#user").click(function () {
-        getUser()
-    });
-
-
-    $("#collection").click(function () {
-        getCollection()
-    });
+$("#user").click(function () {
+    getUser()
+});
 
 
+$("#collection").click(function () {
+    getCollection()
+});
 
 
+//搜索框非空验证
+var key = $("#q").val()
 
-
-
-
-    //搜索框非空验证
-  var key =  $("#keyword").val()
-  function checkkeyword() {
-      if(key==""||key==null){
-          return false;
-      }else{
-          return key;
-      }
-  }
-  
-  function getNote() {
-
-    var keyword=$("#keyword").val();
-      $.ajax({
-          url:GLOBAL_DATA.API_SERVER_URL +"/search",
-          type:"GET",
-          data:{"keyword":keyword,"method":"note"},
-          dataType: "json",
-          timeout: 4000,
-          contentType: "application/text;charset=utf-8",
-          xhrFields: {
-              withCredentials: true //允许跨域
-          },
-          success:function (data) {
-              noteContent(data);
-          },
-          error:function () {
-
-          }
-      })
-  }
-
-
-    function getUser() {
-        var keyword=$("#keyword").val();
-        $.ajax({
-            url:GLOBAL_DATA.API_SERVER_URL +"/search",
-            type:"GET",
-            data:{"keyword":keyword,"method":"user"},
-            dataType: "json",
-            timeout: 4000,
-            contentType: "application/text;charset=utf-8",
-            xhrFields: {
-                withCredentials: true //允许跨域
-            },
-            success:function (data) {
-                userContent(data);
-            },
-            error:function () {
-
-            }
-        })
+function checkkeyword() {
+    if (key == "" || key == null) {
+        return false;
+    } else {
+        return key;
     }
+}
+
+function getNote() {
+
+    var keyword = $("#q").val();
+    $.ajax({
+        url: GLOBAL_DATA.API_SERVER_URL + "/search",
+        type: "GET",
+        data: {"keyword": keyword, "method": "note"},
+        dataType: "json",
+        timeout: 4000,
+        contentType: "application/text;charset=utf-8",
+        xhrFields: {
+            withCredentials: true //允许跨域
+        },
+        success: function (data) {
+            noteContent(data);
+        },
+        error: function () {
+
+        }
+    })
+}
 
 
-    function getCollection() {
-        var keyword=$("#keyword").val();
-        $.ajax({
-            url:GLOBAL_DATA.API_SERVER_URL +"/search",
-            type:"GET",
-            data:{"keyword":keyword,"method":"collection"},
-            dataType: "json",
-            timeout: 4000,
-            contentType: "application/text;charset=utf-8",
-            xhrFields: {
-                withCredentials: true //允许跨域
-            },
-            success:function (data) {
-                collectionContent(data);
-            },
-            error:function () {
+function getUser() {
+    var keyword = $("#q").val();
+    $.ajax({
+        url: GLOBAL_DATA.API_SERVER_URL + "/search",
+        type: "GET",
+        data: {"keyword": keyword, "method": "user"},
+        dataType: "json",
+        timeout: 4000,
+        contentType: "application/text;charset=utf-8",
+        xhrFields: {
+            withCredentials: true //允许跨域
+        },
+        success: function (data) {
+            userContent(data);
+        },
+        error: function () {
 
-            }
-        })
-    }
+        }
+    })
+}
 
 
-    function noteContent(data){
-        $(".searchpg").empty();
-        var searchnoteList = data.extend.searchNoteList;
-        let html = "";
-        $.each(searchnoteList, function (index, item) {
-            html +=`<div class="result"></div>
+function getCollection() {
+    var keyword = $("#q").val();
+    $.ajax({
+        url: GLOBAL_DATA.API_SERVER_URL + "/search",
+        type: "GET",
+        data: {"keyword": keyword, "method": "collection"},
+        dataType: "json",
+        timeout: 4000,
+        contentType: "application/text;charset=utf-8",
+        xhrFields: {
+            withCredentials: true //允许跨域
+        },
+        success: function (data) {
+            collectionContent(data);
+        },
+        error: function () {
+
+        }
+    })
+}
+
+
+function noteContent(data) {
+    $(".searchpg").empty();
+    var searchnoteList = data.extend.searchNoteList;
+    let html = "";
+    $.each(searchnoteList, function (index, item) {
+        html += `<div class="result"></div>
                 <ul class="note-list">
                     <li>
                         <div class="content">
@@ -129,21 +131,17 @@ $(function () {
 
                 </ul> <!----> <!----> <!---->
                 <div>`
-            $(".searchpg").append(html);
-        })
-    }
+        $(".searchpg").append(html);
+    })
+}
 
 
-
-
-
-
-    function userContent(data){
-        $(".searchpg").empty();
-        var searchUserList = data.extend.searchUserList;
-        let html = "";
-        $.each(searchUserList, function (index, item) {
-            html +=`<div class="result"></div> <!---->
+function userContent(data) {
+    $(".searchpg").empty();
+    var searchUserList = data.extend.searchUserList;
+    let html = "";
+    $.each(searchUserList, function (index, item) {
+        html += `<div class="result"></div> <!---->
                 <ul class="user-list">
                     <li><a href="/u/9a920349af10" target="_blank" class="avatar"><img
                             src=${item.avatarPath}></a>
@@ -158,19 +156,17 @@ $(function () {
                         <a class="btn btn-success follow"><i class="iconfont ic-follow"></i><span>关注</span></a></li>
                 </ul> <!----> <!---->
                 <div>`
-            $(".searchpg").append(html);
-        })
-    }
+        $(".searchpg").append(html);
+    })
+}
 
 
-
-
-    function collectionContent(data){
-        $(".searchpg").empty();
-        var searchCollectionList = data.extend.searchCollectionList;
-        let html = "";
-        $.each(searchCollectionList, function (index, item) {
-            html +=`                <div class="result"></div> <!----> <!---->
+function collectionContent(data) {
+    $(".searchpg").empty();
+    var searchCollectionList = data.extend.searchCollectionList;
+    let html = "";
+    $.each(searchCollectionList, function (index, item) {
+        html += `                <div class="result"></div> <!----> <!---->
                 <ul class="user-list">
                     <li><a href="/c/abcf2a519f2f" target="_blank" class="avatar-collection"><img
                             src="//upload.jianshu.io/collections/images/1667243/%E5%B0%81%E9%9D%A2.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144/format/webp"></a>
@@ -185,14 +181,6 @@ $(function () {
                     
                 </ul> <!---->
                 <div>`
-            $(".searchpg").append(html);
-        })
-    }
-
-
-  
-
-
-
-
-})
+        $(".searchpg").append(html);
+    })
+}

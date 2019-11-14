@@ -38,6 +38,11 @@ const PUBLIC_METHODS = {
     outLogin: function () {
         Cookies.remove('token');
         window.location.replace("/sign_in");
+    },
+    getQueryString: function (key) {
+        var reg = new RegExp("(^|&)"+key+"=([^&]*)(&|$)");
+        var result = window.location.search.substr(1).match(reg);
+        return result?decodeURIComponent(result[2]):null;
     }
 };
 
@@ -57,4 +62,11 @@ $("#navbar-my").hover(function () {
 
 $("#outlogin").click(function () {
     PUBLIC_METHODS.outLogin()
+});
+$("#searchButton").click(function () {
+    let val = $("#q").val();
+    console.log(val)
+    if (val !== "") {
+        window.location.replace('/search?searchValu=' + val);
+    }
 });

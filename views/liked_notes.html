@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" media="all" href="../public/myhome/css/web.css">
+    <link rel="stylesheet" media="all" href="../public/myhome/css/entry.css">
+    <link rel="stylesheet" media="all" href="../public/myhome/css/mycss.css">
+    <link href="/public/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+    <style type="text/css">.style-mode{float:right}</style>
+    <title>简书</title>
+</head>
+<!--展示我关注的专题/文集/连载  -->
+<!--我喜欢的文章-->
+<body lang="zh-CN" class="reader-black-font" style="overflow-y: scroll;">
+<!-- 全局顶部导航栏 -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="width-limit">
+        <!-- 左上方 Logo -->
+        <a class="logo" href="/"><img src="../public/images/nav-logo-4c7bbafe27adc892f3046e6978459bac.png" alt="Nav logo"></a>
+
+        <!-- 右上角 -->
+        <!-- 登录显示写文章 -->
+        <a class="btn write-btn" target="_blank" href="/writer#/">
+            <i class="iconfont ic-write"></i>写文章
+        </a>
+        <!-- 如果用户登录，显示下拉菜单 -->
+        <div class="user">
+            <div data-hover="dropdown">
+                <a class="avatar" href="/u/2aa48c940f61"><img src="//cdn2.jianshu.io/assets/default_avatar/11-4d7c6ca89f439111aff57b23be1c73ba.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/120/h/120" alt="120"></a>
+            </div>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="/u/2aa48c940f61">
+                        <i class="iconfont ic-navigation-profile"></i><span>我的主页</span>
+                    </a>          </li>
+                </li>
+                <!-- TODO bookmarks_path -->
+                <a href="/bookmarks">
+                    <i class="iconfont ic-navigation-mark"></i><span>收藏的文章</span>
+                </a>          </li>
+                <li>
+                    <a href="/users/2aa48c940f61/liked_notes">
+                        <i class="iconfont ic-navigation-like"></i><span>喜欢的文章</span>
+                    </a>          </li>
+                <li>
+                    <a href="/my/paid_notes">
+                        <i class="iconfont ic-paid"></i><span>已购内容</span>
+                    </a>          </li>
+                <li>
+                    <a href="/wallet">
+                        <i class="iconfont ic-navigation-wallet"></i><span>我的钱包</span>
+                    </a>          </li>
+                <li>
+                    <a href="/settings">
+                        <i class="iconfont ic-navigation-settings"></i><span>设置</span>
+                    </a>          </li>
+                <li>
+                    <a href="/faqs">
+                        <i class="iconfont ic-navigation-feedback"></i><span>帮助与反馈</span>
+                    </a>          </li>
+                <li>
+                    <a rel="nofollow" data-method="delete" href="/sign_out">
+                        <i class="iconfont ic-navigation-signout"></i><span>退出</span>
+                    </a>          </li>
+            </ul>
+        </div>
+
+        <!--        <div class="nqzzJ71pC-jOnJKAfdtr6_0"><a class="_3tScN0zmSdGLaUAH4SxTbM_0"><img src="//cdn2.jianshu.io/assets/web/nav_jsds_beta-eeb44d165b8ba37680fdb7e65ae17ae4.png" class="_3f806byixOPpOPWnx8HiQP_0"></a> &lt;!&ndash;&ndash;&gt;</div>-->
+
+        <div class="style-mode"><a class="style-mode-btn"><i class="iconfont ic-navigation-mode"></i></a> <div class="popover-modal" style="left: 0px; display: none;"><div class="meta"><i class="iconfont ic-navigation-night"></i><span>夜间模式</span></div> <div class="switch day-night-group"><a class="switch-btn">开</a> <a class="switch-btn active">关</a></div> <hr> <div class="switch font-family-group"><a class="switch-btn font-song">宋体</a> <a class="switch-btn font-hei active">黑体</a></div> <div class="switch"><a class="switch-btn active">简</a> <a class="switch-btn">繁</a></div></div></div>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="nav navbar-nav">
+                    <li class="tab ">
+                        <a href="/">
+                            <span class="menu-text">发现</span><i class="iconfont ic-navigation-discover menu-icon"></i>
+                        </a>            </li>
+                    <li class="tab ">
+                        <a href="/subscriptions">
+                            <span class="menu-text">关注</span><i class="iconfont ic-navigation-follow menu-icon"></i>
+                        </a>            </li>
+                    <li class="tab notification"><a data-hover="dropdown" href="/notifications" class="notification-btn"><span class="menu-text">消息</span> <i class="iconfont ic-navigation-notification menu-icon"></i> <!----> <!----></a> <ul class="dropdown-menu"><li><a href="/notifications#/comments"><i class="iconfont ic-comments"></i> <span>评论</span> <!----></a></li><li><a href="/notifications#/chats"><i class="iconfont ic-chats"></i> <span>简信</span> <!----></a></li><li><a href="/notifications#/requests"><i class="iconfont ic-requests"></i> <span>投稿请求</span> <!----></a></li><li><a href="/notifications#/likes"><i class="iconfont ic-likes"></i> <span>喜欢和赞</span> <!----></a></li><li><a href="/notifications#/follows"><i class="iconfont ic-follows"></i> <span>关注</span> <!----></a></li><li><a href="/notifications#/money"><i class="iconfont ic-money"></i> <span>赞赏和付费</span> <!----></a></li><li><a href="/notifications#/others"><i class="iconfont ic-others"></i> <span>其它提醒</span> <!----></a></li></ul></li>
+                    <li class="search">
+                        <form target="_blank" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+                            <input type="text" name="q" id="q" value="" autocomplete="off" placeholder="搜索" class="search-input">
+                            <a class="search-btn" href="javascript:void(null)"><i class="iconfont ic-search"></i></a>
+                        </form>          </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+<div class="container person">
+    <div class="row">
+        <div class="col-xs-16 main">
+            <div class="main-top">
+
+                <a class="avatar" href="/u/2aa48c940f61">
+                    <img src="//cdn2.jianshu.io/assets/default_avatar/11-4d7c6ca89f439111aff57b23be1c73ba.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240" alt="240">
+                </a>
+
+                <div class="title">
+                    <a class="name" href="/u/2aa48c940f61">believe8</a>
+                </div>
+                <div class="info">
+                    <ul>
+                        <li>
+                            <div class="meta-block">
+                                <a href="/users/2aa48c940f61/following">
+                                    <p>5</p>
+                                    关注 <i class="iconfont ic-arrow"></i>
+                                </a>        </div>
+                        </li>
+                        <li>
+                            <div class="meta-block">
+                                <a href="/users/2aa48c940f61/followers">
+                                    <p>0</p>
+                                    粉丝 <i class="iconfont ic-arrow"></i>
+                                </a>        </div>
+                        </li>
+                        <li>
+                            <div class="meta-block">
+                                <a href="/u/2aa48c940f61">
+                                    <p>1</p>
+                                    文章 <i class="iconfont ic-arrow"></i>
+                                </a>        </div>
+                        </li>
+                        <li>
+                            <div class="meta-block">
+                                <p>216</p>
+                                <div>字数</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="meta-block">
+                                <p>4</p>
+                                <div>收获喜欢</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <ul class="trigger-menu" data-pjax-container="#list-container"><li class="active"><a data-placeholder="collection" href="/users/2aa48c940f61/subscriptions">关注的专题/文集/连载 5</a></li><li class=""><a href="/users/2aa48c940f61/liked_notes">喜欢的文章 2</a></li></ul>
+
+            <div id="list-container"><ul class="user-list" infinite-scroll-url="/users/2aa48c940f61/subscriptions" data-placeholder="collection">
+                <li>
+                    <a class="avatar-collection" href="/c/8c92f845cd4d">
+                        <img src="//upload.jianshu.io/collections/images/283250/%E6%BC%AB%E7%94%BB%E4%B8%93%E9%A2%98.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/156/h/156" alt="156">
+                    </a>  <div class="info">
+                    <a class="title" href="/c/8c92f845cd4d">手绘</a>
+                    <div class="meta">
+                        <a href="/u/yZq3ZV">简书</a>
+                        收录了162652篇文章，2055060人关注
+                    </div>
+                </div>
+                    <a class="btn btn-default following"><i class="iconfont ic-followed"></i><span>已关注</span></a>
+                </li>
+
+                <li>
+                    <a class="avatar-collection" href="/c/5AUzod">
+                        <img src="//upload.jianshu.io/collections/images/13/%E5%95%8A.png?imageMogr2/auto-orient/strip|imageView2/1/w/156/h/156" alt="156">
+                    </a>  <div class="info">
+                    <a class="title" href="/c/5AUzod">旅行·在路上</a>
+                    <div class="meta">
+                        <a href="/u/yZq3ZV">简书</a>
+                        收录了221776篇文章，3229569人关注
+                    </div>
+                </div>
+                    <a class="btn btn-default following"><i class="iconfont ic-followed"></i><span>已关注</span></a>
+                </li>
+
+                <li>
+                    <a class="avatar-collection" href="/c/V2CqjW">
+                        <img src="//upload.jianshu.io/collections/images/14/6249340_194140034135_2.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/156/h/156" alt="156">
+                    </a>  <div class="info">
+                    <a class="title" href="/c/V2CqjW">@IT·互联网</a>
+                    <div class="meta">
+                        <a href="/u/yZq3ZV">简书</a>
+                        收录了53236篇文章，2140018人关注
+                    </div>
+                </div>
+                    <a class="btn btn-default following"><i class="iconfont ic-followed"></i><span>已关注</span></a>
+                </li>
+
+                <li>
+                    <a class="avatar-collection" href="/c/yD9GAd">
+                        <img src="//upload.jianshu.io/collections/images/4/sy_20091020135145113016.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/156/h/156" alt="156">
+                    </a>  <div class="info">
+                    <a class="title" href="/c/yD9GAd">读书</a>
+                    <div class="meta">
+                        <a href="/u/yZq3ZV">简书</a>
+                        收录了316511篇文章，4514206人关注
+                    </div>
+                </div>
+                    <a class="btn btn-default following"><i class="iconfont ic-followed"></i><span>已关注</span></a>
+                </li>
+
+                <li>
+                    <a class="avatar-collection" href="/c/7b2be866f564">
+                        <img src="//upload.jianshu.io/collections/images/83/1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/156/h/156" alt="156">
+                    </a>  <div class="info">
+                    <a class="title" href="/c/7b2be866f564">摄影</a>
+                    <div class="meta">
+                        <a href="/u/yZq3ZV">简书</a>
+                        收录了145841篇文章，2500590人关注
+                    </div>
+                </div>
+                    <a class="btn btn-default following"><i class="iconfont ic-followed"></i><span>已关注</span></a>
+                </li>
+
+
+            </ul>
+            </div>
+        </div>
+
+        <div class="col-xs-7 col-xs-offset-1 aside">
+            <div class="title">个人介绍</div>
+            <a class="function-btn" data-action="start-edit-intro" href="javascript:void(0)"><i class="iconfont ic-edit-s"></i>编辑</a>
+            <form class="profile-edit js-intro-form" data-type="json" id="edit_user_20044457" action="/users/2aa48c940f61" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch">
+                <textarea name="user[intro]" id="user_intro">dfgdfgdfgd</textarea>
+                <input type="submit" name="commit" value="保存" class="btn btn-hollow" data-action="save-edit-intro" data-disable-with="保存">
+                <a data-action="cancel-edit-intro" href="javascript:void(null);">取消</a>
+            </form>  <div class="description">
+            <div class="js-intro">dfgdfgdfgd</div>
+
+
+        </div>
+            <div id="user-publications"><!----></div>
+            <div id="user-courses"><!----></div>
+            <ul class="list user-dynamic">
+                <li>
+                    <a href="/users/2aa48c940f61/subscriptions">
+                        <i class="iconfont ic-collection"></i> <span>我关注的专题</span>
+                    </a>    </li>
+                <li>
+                    <a href="/users/2aa48c940f61/liked_notes">
+                        <i class="iconfont ic-like "></i> <span>我喜欢的文章</span>
+                    </a>    </li>
+            </ul>
+            <!-- 专题和文集 -->
+            <div><div><!----> <div class="title">我创建的专题</div> <div class="new-collection-block"><a href="/collections/new" class="new-collection-btn"><i class="iconfont ic-follow"></i><span>创建一个新专题</span></a></div></div> <!----> <div><div class="title">
+                我的文集
+            </div> <ul class="list"><li><a href="/nb/40660627" target="_blank"><i class="iconfont ic-search-notebook"></i></a> <a href="/nb/40660627" target="_blank" class="name">
+                日记本
+                <!----></a></li> <li><!----> <!----></li></ul></div></div>
+        </div>
+
+    </div>
+</div>
+<div class="side-tool"><ul><li data-placement="left" data-toggle="tooltip" data-container="body" data-original-title="回到顶部" style="display: none;"><a class="function-button"><i class="iconfont ic-backtop"></i></a></li> <!----> <!----> <!----> <!----> <!----> <!----></ul></div>
+
+<!--<script type="application/json" data-name="page-data">{"user_signed_in":true,"locale":"zh-CN","os":"windows","read_mode":"day","read_font":"font2","current_user":{"id":20044457,"nickname":"believe8","slug":"2aa48c940f61","avatar":"http://cdn2.jianshu.io/assets/default_avatar/11-4d7c6ca89f439111aff57b23be1c73ba.jpg","unread_counts":{"total":null},"is_member":false,"ads_free":false},"user":{"slug":"2aa48c940f61","gender":0},"has_collections":false}</script>-->
+<script src="../public/myhome/js/jquery_3.4.1.js" crossorigin="anonymous"></script>
+<script src="../public/myhome/js/js-cookie.js" crossorigin="anonymous"></script>
+<script src="../public/myhome/js/globalJs.js" crossorigin="anonymous"></script>
+<script src="../public/myhome/js/babel-polyfill.js" crossorigin="anonymous"></script>
+<script src="../public/myhome/js/web-base.js" crossorigin="anonymous"></script>
+<script src="../public/myhome/js/web.js" crossorigin="anonymous"></script>
+<script src="../public/myhome/js/entry.js" crossorigin="anonymous"></script>
+
+
+
+<!----><!----><!----><st-div id="__selection-translator__"> <st-div class="__st-box__" style="display: none; position: fixed; z-index: 99999; left: 0px; top: 0px; transform: translateX(694px) translateY(172px);"> <st-header> <st-span class="st-icon-pin" title="固定"></st-span> <st-span class="st-icon-down-open" title="展开"></st-span> <st-span class="st-icon-cog" title="设置"></st-span> </st-header> <st-div class="__query-form__" style="display: none;"> <st-div> <textarea placeholder="输入要翻译的句子或单词"></textarea> </st-div> <st-div> <select> <option value="">自动判断</option> <option value="zh">中文</option><option value="zh-CN">中文(简体)</option><option value="zh-HK">中文(香港)</option><option value="zh-TW">中文(繁体)</option><option value="en">英语</option><option value="ja">日语</option><option value="ko">朝鲜语</option><option value="de">德语</option><option value="fr">法语</option><option value="ru">俄语</option><option value="th">泰语</option><option value="af">南非语</option><option value="ar">阿拉伯语</option><option value="az">阿塞拜疆语</option><option value="be">比利时语</option><option value="bg">保加利亚语</option><option value="ca">加泰隆语</option><option value="cs">捷克语</option><option value="cy">威尔士语</option><option value="da">丹麦语</option><option value="dv">第维埃语</option><option value="el">希腊语</option><option value="eo">世界语</option><option value="es">西班牙语</option><option value="et">爱沙尼亚语</option><option value="eu">巴士克语</option><option value="fa">法斯语</option><option value="fi">芬兰语</option><option value="fo">法罗语</option><option value="gl">加里西亚语</option><option value="gu">古吉拉特语</option><option value="he">希伯来语</option><option value="hi">印地语</option><option value="hr">克罗地亚语</option><option value="hu">匈牙利语</option><option value="hy">亚美尼亚语</option><option value="id">印度尼西亚语</option><option value="is">冰岛语</option><option value="it">意大利语</option><option value="ka">格鲁吉亚语</option><option value="kk">哈萨克语</option><option value="kn">卡纳拉语</option><option value="kok">孔卡尼语</option><option value="ky">吉尔吉斯语</option><option value="lt">立陶宛语</option><option value="lv">拉脱维亚语</option><option value="mi">毛利语</option><option value="mk">马其顿语</option><option value="mn">蒙古语</option><option value="mr">马拉地语</option><option value="ms">马来语</option><option value="mt">马耳他语</option><option value="nb">挪威语(伯克梅尔)</option><option value="nl">荷兰语</option><option value="ns">北梭托语</option><option value="pa">旁遮普语</option><option value="pl">波兰语</option><option value="pt">葡萄牙语</option><option value="qu">克丘亚语</option><option value="ro">罗马尼亚语</option><option value="sa">梵文</option><option value="se">北萨摩斯语</option><option value="sk">斯洛伐克语</option><option value="sl">斯洛文尼亚语</option><option value="sq">阿尔巴尼亚语</option><option value="sv">瑞典语</option><option value="sw">斯瓦希里语</option><option value="syr">叙利亚语</option><option value="ta">泰米尔语</option><option value="te">泰卢固语</option><option value="tl">塔加路语</option><option value="tn">茨瓦纳语</option><option value="tr">土耳其语</option><option value="ts">宗加语</option><option value="tt">鞑靼语</option><option value="uk">乌克兰语</option><option value="ur">乌都语</option><option value="uz">乌兹别克语</option><option value="vi">越南语</option><option value="xh">班图语</option><option value="zu">祖鲁语</option> </select> <st-div class="__exchange__"> <st-span class="st-icon-exchange"></st-span> </st-div> <select> <option value="">自动选择</option> <option value="zh">中文</option><option value="zh-CN">中文(简体)</option><option value="zh-HK">中文(香港)</option><option value="zh-TW">中文(繁体)</option><option value="en">英语</option><option value="ja">日语</option><option value="ko">朝鲜语</option><option value="de">德语</option><option value="fr">法语</option><option value="ru">俄语</option><option value="th">泰语</option><option value="af">南非语</option><option value="ar">阿拉伯语</option><option value="az">阿塞拜疆语</option><option value="be">比利时语</option><option value="bg">保加利亚语</option><option value="ca">加泰隆语</option><option value="cs">捷克语</option><option value="cy">威尔士语</option><option value="da">丹麦语</option><option value="dv">第维埃语</option><option value="el">希腊语</option><option value="eo">世界语</option><option value="es">西班牙语</option><option value="et">爱沙尼亚语</option><option value="eu">巴士克语</option><option value="fa">法斯语</option><option value="fi">芬兰语</option><option value="fo">法罗语</option><option value="gl">加里西亚语</option><option value="gu">古吉拉特语</option><option value="he">希伯来语</option><option value="hi">印地语</option><option value="hr">克罗地亚语</option><option value="hu">匈牙利语</option><option value="hy">亚美尼亚语</option><option value="id">印度尼西亚语</option><option value="is">冰岛语</option><option value="it">意大利语</option><option value="ka">格鲁吉亚语</option><option value="kk">哈萨克语</option><option value="kn">卡纳拉语</option><option value="kok">孔卡尼语</option><option value="ky">吉尔吉斯语</option><option value="lt">立陶宛语</option><option value="lv">拉脱维亚语</option><option value="mi">毛利语</option><option value="mk">马其顿语</option><option value="mn">蒙古语</option><option value="mr">马拉地语</option><option value="ms">马来语</option><option value="mt">马耳他语</option><option value="nb">挪威语(伯克梅尔)</option><option value="nl">荷兰语</option><option value="ns">北梭托语</option><option value="pa">旁遮普语</option><option value="pl">波兰语</option><option value="pt">葡萄牙语</option><option value="qu">克丘亚语</option><option value="ro">罗马尼亚语</option><option value="sa">梵文</option><option value="se">北萨摩斯语</option><option value="sk">斯洛伐克语</option><option value="sl">斯洛文尼亚语</option><option value="sq">阿尔巴尼亚语</option><option value="sv">瑞典语</option><option value="sw">斯瓦希里语</option><option value="syr">叙利亚语</option><option value="ta">泰米尔语</option><option value="te">泰卢固语</option><option value="tl">塔加路语</option><option value="tn">茨瓦纳语</option><option value="tr">土耳其语</option><option value="ts">宗加语</option><option value="tt">鞑靼语</option><option value="uk">乌克兰语</option><option value="ur">乌都语</option><option value="uz">乌兹别克语</option><option value="vi">越南语</option><option value="xh">班图语</option><option value="zu">祖鲁语</option> </select> </st-div> <st-div> <select> <option value="YouDao">有道翻译</option> <option value="BaiDu">百度翻译</option> <option value="Google">谷歌翻译</option> <option value="GoogleCN">谷歌翻译（国内）</option> </select> <st-div class="__action-list__"> <st-div class="__button__ __btn-translate__">翻译 <st-span class="st-icon-down-dir"></st-span> </st-div> <st-div class="__expand__"> <st-div class="__button__">朗读</st-div> <st-div class="__button__">复制</st-div> </st-div> </st-div> </st-div> </st-div> <st-div class="__translate-result__" style="display: none;">正在查询，请稍候……</st-div> <st-div class="__translate-result__"> <st-div style="display: none;"> <st-span></st-span> <st-span class="__retry__">重试</st-span> </st-div> <st-div> <st-div class="__phonetic__"> <st-span style="display: none;"></st-span> <st-span class="__copy-and-read__"> <st-span>朗读</st-span> <st-span style="display: none;">复制</st-span> </st-span> </st-div> <st-div style="display: none;"> <st-ul>  </st-ul> <st-div class="__copy-and-read__"> <st-span class="__copy-and-read__">复制</st-span> </st-div> </st-div> <st-div style="display: none;">  <st-div class="__copy-and-read__"> <st-span class="__copy-and-read__">朗读</st-span> <st-span class="__copy-and-read__">复制</st-span> </st-div> </st-div> </st-div> </st-div> <st-footer> <st-span style="">via <a target="_blank" href="">谷歌翻译（国内）</a></st-span> </st-footer> </st-div> <st-div class="__st-btn__" style="display: none; position: fixed; z-index: 99999; left: 0px; top: 0px; transform: translateX(694px) translateY(172px);">译</st-div> </st-div></body>
+</html>

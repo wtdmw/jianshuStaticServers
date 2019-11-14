@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+
+
+    <!-- Apple -->
+    <meta name="apple-mobile-web-app-title" content="简书">
+
+    <meta name="robots" content="noindex">
+
+
+    <title>搜索 - 简书</title>
+    <link rel="stylesheet" media="all" href="/public/stylesheets/web-30728a1164102859481d.css">
+
+    <link rel="stylesheet" media="all"
+          href="/public/stylesheets/entry-0a4b0d02727ee62132b8.css">
+    <link href="/public/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <style type="text/css">
+        .nqzzJ71pC-jOnJKAfdtr6_0 {
+            float: right;
+            height: 55px;
+            padding: 15px 0px;
+            margin: 0 12px;
+        }
+
+        ._3tScN0zmSdGLaUAH4SxTbM_0 {
+            width: 100%;
+            height: 100%;
+        }
+
+        .nqzzJ71pC-jOnJKAfdtr6_0 ._3f806byixOPpOPWnx8HiQP_0 {
+            height: 25px;
+        }
+
+        .nqzzJ71pC-jOnJKAfdtr6_0 ._2MIQ6sBppQZAKea91We0qf_0 {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            opacity: 0.6;
+            z-index: 1000;
+        }
+
+        .nqzzJ71pC-jOnJKAfdtr6_0 ._1RppgOJ_CQiXgzd3ke-sbJ_0 {
+            position: fixed;
+            left: -webkit-calc(50% - 190px);
+            left: calc(50% - 190px);
+            top: -webkit-calc(50% - 300px);
+            top: calc(50% - 300px);
+            width: 380px;
+            height: 425px;
+            background-color: #fff;
+            padding: 40px 72px 0;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        body.reader-night-mode .nqzzJ71pC-jOnJKAfdtr6_0 ._1RppgOJ_CQiXgzd3ke-sbJ_0 {
+            background-color: #3f3f3f;
+            color: #c8c8c8;
+        }
+
+        .nqzzJ71pC-jOnJKAfdtr6_0 ._1RppgOJ_CQiXgzd3ke-sbJ_0 h4 {
+            margin: 0;
+            line-height: 25px;
+        }
+
+        .nqzzJ71pC-jOnJKAfdtr6_0 ._1RppgOJ_CQiXgzd3ke-sbJ_0 h4 span {
+            color: #e9634c;
+        }
+
+        .nqzzJ71pC-jOnJKAfdtr6_0 ._1RppgOJ_CQiXgzd3ke-sbJ_0 img {
+            width: 190px;
+            height: 190px;
+            margin: 12px 0 8px 0;
+        }
+
+        .nqzzJ71pC-jOnJKAfdtr6_0 ._1RppgOJ_CQiXgzd3ke-sbJ_0 p {
+            font-size: 14px;
+            line-height: 20px;
+            margin: 0;
+        }
+
+        .nqzzJ71pC-jOnJKAfdtr6_0 ._1RppgOJ_CQiXgzd3ke-sbJ_0 ._2WUz9DZJO5DIC_O5sD1kac_0 {
+            background-color: #e9634c;
+            color: #fff;
+            margin: 25px auto 0;
+            width: 190px;
+            height: 40px;
+            border-radius: 20px;
+            line-height: 40px;
+            font-size: 14px;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+    <style type="text/css">
+        .v-select-wrap {
+            position: relative;
+        }
+
+        .v-select-wrap .v-select-text-area-wrap {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .v-select-wrap .v-select-text-area-wrap .v-select-selected-item-wrap {
+            float: left;
+            height: 100%;
+        }
+
+        .v-select-wrap .v-select-text-area-wrap .v-select-selected-item-wrap .v-select-selected-item {
+            display: block;
+            padding: 15px;
+            margin: 0 5px;
+            height: 100%;
+            float: left;
+            cursor: pointer;
+        }
+
+        .v-select-wrap .v-select-text-area-wrap .v-select-input-wrap {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .v-select-wrap .v-select-text-area-wrap .v-select-input-wrap .v-select-input {
+            width: 100%;
+            height: 100%;
+        }
+
+        .v-select-wrap .v-select-submit-wrap {
+            float: right;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .v-select-wrap .v-select-submit-wrap svg {
+            width: 16px;
+            height: 16px;
+            vertical-align: middle;
+            -webkit-transition-duration: 300ms;
+            -o-transition-duration: 300ms;
+            transition-duration: 300ms;
+        }
+
+        .v-select-wrap .v-select-submit-wrap.open svg {
+            -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+
+        .v-select-wrap .v-select-options-wrap {
+            width: 100%;
+            cursor: pointer;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            z-index: 999;
+        }
+
+        .v-select-wrap .v-select-options-wrap .v-select-options-item:hover {
+            cursor: pointer;
+        }
+
+        .v-select-wrap .v-select-options-wrap .v-select-options-item.disabled {
+            cursor: not-allowed;
+        }
+
+        .v-select-wrap .zoom-in-top-enter-active,
+        .v-select-wrap .zoom-in-top-leave-active {
+            opacity: 1;
+            -webkit-transform: scaleY(1);
+            -ms-transform: scaleY(1);
+            transform: scaleY(1);
+            -webkit-transition: opacity 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+            transition: opacity 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+            -o-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1), opacity 300ms cubic-bezier(0.23, 1, 0.32, 1);
+            transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1), opacity 300ms cubic-bezier(0.23, 1, 0.32, 1);
+            transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1), opacity 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+            -webkit-transform-origin: center top;
+            -ms-transform-origin: center top;
+            transform-origin: center top;
+        }
+
+        .v-select-wrap .zoom-in-top-enter,
+        .v-select-wrap .zoom-in-top-leave-active {
+            opacity: 0;
+            -webkit-transform: scaleY(0);
+            -ms-transform: scaleY(0);
+            transform: scaleY(0);
+        }
+    </style>
+</head>
+
+
+<body lang="zh-CN" class="reader-black-font">
+<!-- 全局顶部导航栏 -->
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="width-limit">
+        <!-- 左上方 Logo -->
+        <a class="logo" href="/"><img src="/public/images/nav-logo-4c7bbafe27adc892f3046e6978459bac.png" alt="Nav logo"></a>
+
+        <!-- 右上角 -->
+        <!-- 登录显示写文章 -->
+        <a class="btn write-btn" target="_blank" href="/writer#/">
+            <i class="iconfont ic-write"></i>写文章
+        </a>
+        <!-- 如果用户登录，显示下拉菜单 -->
+        <!--        开启下拉 class = "user open  "-->
+        <div class="user" id="navbar-my">
+            <div data-hover="dropdown">
+                <a class="avatar" href="/u/a721216f3cbb"><img
+                        src="/public/images/8b976428-5cbd-4f1b-98c3-f39a189e3401.jfif"
+                        alt="120"></a>
+            </div>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="/u/a721216f3cbb">
+                        <i class="iconfont ic-navigation-profile"></i><span>我的主页</span>
+                    </a></li>
+                <li>
+                    <!-- TODO bookmarks_path -->
+                    <a href="/bookmarks">
+                        <i class="iconfont ic-navigation-mark"></i><span>收藏的文章</span>
+                    </a></li>
+                <li>
+                    <a href="/users/a721216f3cbb/liked_notes">
+                        <i class="iconfont ic-navigation-like"></i><span>喜欢的文章</span>
+                    </a></li>
+                <li>
+                    <a href="/my/paid_notes">
+                        <i class="iconfont ic-paid"></i><span>已购内容</span>
+                    </a></li>
+                <li>
+                    <a href="/wallet">
+                        <i class="iconfont ic-navigation-wallet"></i><span>我的钱包</span>
+                    </a></li>
+                <li>
+                    <a href="/settings">
+                        <i class="iconfont ic-navigation-settings"></i><span>设置</span>
+                    </a></li>
+                <li>
+                    <a href="/faqs">
+                        <i class="iconfont ic-navigation-feedback"></i><span>帮助与反馈</span>
+                    </a></li>
+                <li>
+                    <a rel="nofollow" data-method="delete" href="javascript:void(0);" id="outlogin">
+                        <i class="iconfont ic-navigation-signout"></i><span>退出</span>
+                    </a></li>
+            </ul>
+        </div>
+
+
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu"
+                        aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="nav navbar-nav">
+                    <li class="tab">
+                        <a href="/">
+                            <span class="menu-text">发现</span><i class="iconfont ic-navigation-discover menu-icon"></i>
+                        </a></li>
+                    <li class="tab ">
+                        <a href="/subscriptions">
+                            <span class="menu-text">关注</span><i class="iconfont ic-navigation-follow menu-icon"></i>
+                        </a></li>
+                    <li class="tab notification"><a data-hover="dropdown" href="/comment"
+                                                    class="notification-btn"><span class="menu-text">消息</span> <i
+                            class="iconfont ic-navigation-notification menu-icon"></i> <!----> <!----></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/notifications#/comments"><i class="iconfont ic-comments"></i> <span>评论</span>
+                                <!----></a></li>
+                            <li><a href="/notifications#/chats"><i class="iconfont ic-chats"></i> <span>简信</span><!---->
+                            </a></li>
+                            <li><a href="/notifications#/requests"><i class="iconfont ic-requests"></i>
+                                <span>投稿请求</span> <!----></a></li>
+                            <li><a href="/notifications#/likes"><i class="iconfont ic-likes"></i> <span>喜欢和赞</span>
+                                <!----></a></li>
+                            <li><a href="/notifications#/follows"><i class="iconfont ic-follows"></i> <span>关注</span>
+                                <!----></a></li>
+                            <li><a href="/notifications#/money"><i class="iconfont ic-money"></i> <span>赞赏和付费</span>
+                                <!----></a></li>
+                            <li><a href="/notifications#/others"><i class="iconfont ic-others"></i> <span>其它提醒</span>
+                                <!----></a></li>
+                        </ul>
+                    </li>
+                    <li class="search">
+                        <form target="_blank" action="/search" accept-charset="UTF-8" method="get"><input name="utf8"
+                                                                                                          type="hidden"
+                                                                                                          value="✓">
+                            <input type="text" name="q" id="q" value="" autocomplete="off" placeholder="搜索"
+                                   class="search-input">
+                            <a class="search-btn" href="javascript:void(null)" id="searchButton"><i class="iconfont ic-search"></i></a>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+<div class="container search">
+    <div class="row">
+        <div class="aside">
+            <div>
+                <ul class="menu">
+                    <li id="note"><a>
+                        <div class="setting-icon"><i class="iconfont ic-search-note"></i></div>
+                        <span>文章</span></a></li>
+                    <li class="" id="user"><a>
+                        <div class="setting-icon"><i class="iconfont ic-search-user"></i></div>
+                        <span>用户</span></a></li>
+                    <li class="" id="collection"><a>
+                        <div class="setting-icon"><i class="iconfont ic-search-collection"></i></div>
+                        <span>专题</span></a></li>
+
+                </ul>
+            </div> <!---->
+
+        </div>
+        <div class="col-xs-16 col-xs-offset-8 main">
+            <div class="search-content">
+                <div class="sort-type"><a class="active">
+                    综合排序
+                    ·
+                </a><a class="">
+                    热门文章
+                    ·
+                </a><a class="">
+                    最新发布
+                    ·
+                </a><a class="">
+                    最新评论
+
+                </a> <span>
+
+            </span>
+
+                </div> <!---->
+                <div class="searchpg"></div>
+                <div class="page_nav_area"></div>
+                <!----></div>
+        </div>
+    </div>
+</div>
+
+<!--<script type="application/json" data-name="page-data">{
+    "user_signed_in": true,
+    "locale": "zh-CN",
+    "os": "windows",
+    "read_mode": "day",
+    "read_font": "font2",
+    "current_user": {
+        "id": 4325059,
+        "nickname": "MauriceYZM",
+        "slug": "c39ed246cbaa",
+        "avatar": "http://cdn2.jianshu.io/assets/default_avatar/1-04bbeead395d74921af6a4e8214b4f61.jpg",
+        "unread_counts": {
+            "chats": 0,
+            "total": 0
+        },
+        "is_member": false,
+        "ads_free": false
+    }
+}</script>-->
+
+
+
+<script src="/public/javascripts/jquery_3.4.1.js"></script>
+<script src="/public/javascripts/js-cookie.js"></script>
+<script src="/public/javascripts/globalJs.js"></script>
+<script src="/public/javascripts/search.js"></script>
+</body>
+
+</html>

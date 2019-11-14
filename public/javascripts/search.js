@@ -1,3 +1,7 @@
+let currentPage = 0;
+let type = 1;
+
+
 //页面加载获取参数请求
 (function () {
     let queryString = PUBLIC_METHODS.getQueryString(`searchValu`);
@@ -7,8 +11,27 @@
 })();
 
 $(".search .search-btn").click(function () {
+    $(".searchpg").empty();
     getNote();
 })
+
+
+$("#note").click(function () {
+    $(".searchpg").empty();
+    getNote()
+});
+
+$("#user").click(function () {
+    $(".searchpg").empty();
+    getUser()
+});
+
+
+$("#collection").click(function () {
+    $(".searchpg").empty();
+    getCollection();
+});
+
 
 /*    $(".menu li").click(function () {
         $(this).siblings('li').removeClass('active');
@@ -41,12 +64,12 @@ function checkkeyword() {
 }
 
 function getNote() {
-
+    type = 1;
     var keyword = $("#q").val();
     $.ajax({
         url: GLOBAL_DATA.API_SERVER_URL + "/search",
         type: "GET",
-        data: {"keyword": keyword, "method": "note"},
+        data: {keyword: keyword, method: "note", currentPage: currentPage * 10},
         dataType: "json",
         timeout: 4000,
         contentType: "application/text;charset=utf-8",
@@ -64,11 +87,12 @@ function getNote() {
 
 
 function getUser() {
+    type = 2;
     var keyword = $("#q").val();
     $.ajax({
         url: GLOBAL_DATA.API_SERVER_URL + "/search",
         type: "GET",
-        data: {"keyword": keyword, "method": "user"},
+        data: {keyword: keyword, method: "user", currentPage: currentPage * 10},
         dataType: "json",
         timeout: 4000,
         contentType: "application/text;charset=utf-8",
@@ -86,11 +110,12 @@ function getUser() {
 
 
 function getCollection() {
+    type = 3;
     var keyword = $("#q").val();
     $.ajax({
         url: GLOBAL_DATA.API_SERVER_URL + "/search",
         type: "GET",
-        data: {"keyword": keyword, "method": "collection"},
+        data: {keyword: keyword, method: "collection", currentPage: currentPage * 10},
         dataType: "json",
         timeout: 4000,
         contentType: "application/text;charset=utf-8",
@@ -107,8 +132,19 @@ function getCollection() {
 }
 
 
+$("#yuedugengduo").click(function () {
+    currentPage += 1;
+    if (type == 1) {
+        getNote(currentPage);
+    } else if (type = 2) {
+        getUser(currentPage)
+    } else if (type = 3) {
+        getCollection(currentPage)
+    }
+});
+
+
 function noteContent(data) {
-    $(".searchpg").empty();
     var searchnoteList = data.extend.searchNoteList;
     let html = "";
     $.each(searchnoteList, function (index, item) {
@@ -131,13 +167,13 @@ function noteContent(data) {
 
                 </ul> <!----> <!----> <!---->
                 <div>`
-        $(".searchpg").append(html);
-    })
+
+    });
+    $(".searchpg").append(html);
 }
 
 
 function userContent(data) {
-    $(".searchpg").empty();
     var searchUserList = data.extend.searchUserList;
     let html = "";
     $.each(searchUserList, function (index, item) {
@@ -156,13 +192,14 @@ function userContent(data) {
                         <a class="btn btn-success follow"><i class="iconfont ic-follow"></i><span>关注</span></a></li>
                 </ul> <!----> <!---->
                 <div>`
-        $(".searchpg").append(html);
+
     })
+    $(".searchpg").append(html);
 }
 
 
 function collectionContent(data) {
-    $(".searchpg").empty();
+
     var searchCollectionList = data.extend.searchCollectionList;
     let html = "";
     $.each(searchCollectionList, function (index, item) {
@@ -181,6 +218,7 @@ function collectionContent(data) {
                     
                 </ul> <!---->
                 <div>`
-        $(".searchpg").append(html);
+
     })
+    $(".searchpg").append(html);
 }

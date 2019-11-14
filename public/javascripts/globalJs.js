@@ -112,6 +112,9 @@ const PUBLIC_METHODS = {
 (function () {
     //登录检查
     PUBLIC_METHODS.loginDetection();
+    //导航栏头像修改
+    $("#usertouxiang").attr("src",Cookies.get("avatarPath"))
+
 })();
 
 //导航栏
@@ -121,7 +124,6 @@ $("#navbar-my").hover(function () {
     function () {
         $("#navbar-my").removeClass("open");
     });
-
 $("#outlogin").click(function () {
     PUBLIC_METHODS.outLogin()
 });

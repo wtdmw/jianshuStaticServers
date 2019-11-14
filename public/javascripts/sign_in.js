@@ -63,6 +63,10 @@ var sign_in_inputs = {
                     if (data.token !== undefined) {
                         console.log(data)
                         Cookies.set('token', data.token, {expires: 7, path: '/'});
+                        Cookies.set('id', data.data.id, {expires: 7, path: '/'});
+                        Cookies.set('nickName', data.data.nickName, {expires: 7, path: '/'});
+                        Cookies.set('avatarPath', data.data.avatarPath, {expires: 7, path: '/'});
+                        Cookies.set('timeStamp', data.data.timeStamp, {expires: 7, path: '/'});
                         //跳转首页
                         window.location.replace("/");
                     }

@@ -15,8 +15,8 @@ function getLocalTime(nS) {
 }
 
 /*获取url参数*/
-let userId = getQueryVariable("userId");
-if (userId==""||userId==null){
+let userId = Cookies.get('id');
+if (userId===""||userId==null){
     window.location="404";
 }
 
@@ -38,7 +38,7 @@ $.ajax({
     },
 
     success: function (data) {
-        if (data.code == 100) {
+        if (data.code === 100) {
             let follow = data.extend.infos.follow;//用户关注
             let flower = data.extend.infos.flower;//用户粉丝
             let articleCount = data.extend.infos.articleCount;//用户文章数
@@ -146,7 +146,7 @@ function getArticle(currentPage){
                         ariticle += `
                             <li id="note-${ele.id}" data-note-id="${ele.id}" class="have-img">
                 <a class="wrap-img" href="/p/e01fa9975030" target="_blank">
-                  <img class="  img-blur-done" src="${img}"  alt="120">
+                  <img class="  img-blur-done" src="/public/images/1891933-76e3d08efdba8402.jfif"  alt="120">
                 </a>
               <div class="content ">
                 <a class="title" target="_blank" href="/p/e01fa9975030">${ele.title}</a>
